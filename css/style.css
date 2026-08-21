@@ -1149,6 +1149,35 @@ img {
   text-decoration: underline;
 }
 
+.footer-social-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(199, 169, 123, 0.3);
+  color: var(--champagne-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.footer-social-btn:hover {
+  background: var(--champagne-gold);
+  color: var(--royal-navy);
+  transform: translateY(-3px);
+  border-color: var(--champagne-gold);
+  box-shadow: 0 4px 12px rgba(199, 169, 123, 0.35);
+}
+
 .footer-bottom {
   margin-top: 3.5rem;
   padding-top: 1.8rem;
