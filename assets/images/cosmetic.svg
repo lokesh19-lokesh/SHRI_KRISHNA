@@ -30,6 +30,6 @@
     <path d="M 20,0 L 25,15 L 40,20 L 25,25 L 20,40 L 15,25 L 0,20 L 15,15 Z"/>
   </g>
 
-  <text x="250" y="325" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="16" font-weight="600" letter-spacing="1">COSMETIC & SMILE ENHANCEMENT</text>
-  <text x="250" y="350" text-anchor="middle" fill="#C7A97B" font-family="'Montserrat', sans-serif" font-size="12">Veneers, Whitening & Esthetics</text>
+  <text x="250" y="325" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="16" font-weight="600" letter-spacing="1">COSMETIC &amp; SMILE ENHANCEMENT</text>
+  <text x="250" y="350" text-anchor="middle" fill="#C7A97B" font-family="'Montserrat', sans-serif" font-size="12">Veneers, Whitening &amp; Esthetics</text>
 </svg>
