@@ -1368,7 +1368,9 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -1378,4 +1380,129 @@ img {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* --------------------------------------------------------------------------
+   23. GOOGLE ADS LANDING PAGE (PPC OPTIMIZED)
+   -------------------------------------------------------------------------- */
+.lp-header {
+  background: var(--royal-navy);
+  padding: 0.85rem 0;
+  border-bottom: 2px solid var(--champagne-gold);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  box-shadow: 0 4px 15px rgba(1, 13, 48, 0.35);
+}
+
+.lp-hero {
+  background: linear-gradient(135deg, var(--royal-navy) 0%, #06236b 60%, #0a3194 100%);
+  color: #ffffff;
+  padding: 4.5rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.lp-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(199, 169, 123, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.lp-form-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2.2rem;
+  box-shadow: 0 15px 40px rgba(1, 13, 48, 0.25);
+  border: 2px solid var(--champagne-gold);
+  position: relative;
+}
+
+.lp-form-badge {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  background: var(--champagne-gold);
+  color: var(--royal-navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.lp-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(199, 169, 123, 0.4);
+  padding: 0.45rem 0.95rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--ivory);
+}
+
+.lp-offer-card {
+  background: #ffffff;
+  border-radius: 0.85rem;
+  border: 1.5px solid rgba(199, 169, 123, 0.3);
+  padding: 1.8rem;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.lp-offer-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--champagne-gold);
+  box-shadow: 0 12px 30px rgba(3, 25, 88, 0.1);
+}
+
+.lp-offer-badge {
+  display: inline-block;
+  background: rgba(199, 169, 123, 0.15);
+  color: var(--royal-navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(199, 169, 123, 0.4);
+}
+
+.lp-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.lp-feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(199, 169, 123, 0.18);
+  color: var(--champagne-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+}
+
+.rating-stars {
+  color: #ffc107;
+  font-size: 1.1rem;
+  display: inline-flex;
+  gap: 0.2rem;
 }
