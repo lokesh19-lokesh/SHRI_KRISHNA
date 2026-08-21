@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7A97B" />
+      <stop offset="100%" stop-color="#AC895B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Crest Icon -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="70" height="70" rx="14" fill="#031958" stroke="url(#logoGold)" stroke-width="2"/>
+    <path d="M 27,18 C 31,14 39,14 43,18 C 49,22 49,30 46,38 C 44,44 40,50 37,50 C 35,50 34,44 34,40 C 34,44 33,50 31,50 C 28,50 24,44 22,38 C 19,30 19,22 27,18 Z" fill="url(#logoGold)"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="95" y="38" fill="#ffffff" font-family="'Cinzel', serif" font-weight="700" font-size="20" letter-spacing="1.2">SHRI KRISHNA</text>
+  <text x="95" y="58" fill="#C7A97B" font-family="'Cinzel', serif" font-weight="600" font-size="13" letter-spacing="2.5">DENTAL HOSPITAL</text>
+  <text x="95" y="74" fill="#D4D5D7" font-family="'Montserrat', sans-serif" font-weight="400" font-size="9" letter-spacing="0.5">Previously Known as Jo'Dent Dental Clinic</text>
+</svg>

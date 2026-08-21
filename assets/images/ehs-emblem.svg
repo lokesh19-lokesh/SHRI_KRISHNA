@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006B4F" />
+      <stop offset="100%" stop-color="#004d38" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Shield -->
+  <path d="M 120,20 L 210,55 C 210,145 120,215 120,215 C 120,215 30,145 30,55 Z" fill="url(#greenGrad)" stroke="#C7A97B" stroke-width="4"/>
+  
+  <!-- Inner Medical Cross Contour -->
+  <g fill="#ffffff">
+    <rect x="106" y="65" width="28" height="90" rx="4" />
+    <rect x="75" y="96" width="90" height="28" rx="4" />
+  </g>
+
+  <!-- Central Star of Health -->
+  <circle cx="120" cy="110" r="10" fill="#006B4F" />
+  <circle cx="120" cy="110" r="5" fill="#C7A97B" />
+</svg>

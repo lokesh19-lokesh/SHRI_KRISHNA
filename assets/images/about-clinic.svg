@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="abtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031958" />
+      <stop offset="100%" stop-color="#010d30" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7A97B" />
+      <stop offset="100%" stop-color="#AC895B" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" rx="18" fill="url(#abtBg)"/>
+  
+  <!-- Architectural Hospital Facade Elements -->
+  <path d="M 50,340 L 550,340" stroke="#C7A97B" stroke-width="2"/>
+  <rect x="100" y="140" width="400" height="200" rx="12" fill="#08216b" stroke="#C7A97B" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Entrance & Pillars -->
+  <rect x="250" y="220" width="100" height="120" rx="6" fill="#02113D" stroke="#C7A97B" stroke-width="2"/>
+  <line x1="300" y1="220" x2="300" y2="340" stroke="#C7A97B" stroke-width="1"/>
+  
+  <line x1="150" y1="140" x2="150" y2="340" stroke="#C7A97B" stroke-width="2" stroke-dasharray="3,4"/>
+  <line x1="450" y1="140" x2="450" y2="340" stroke="#C7A97B" stroke-width="2" stroke-dasharray="3,4"/>
+
+  <!-- Hospital Brand Crest -->
+  <circle cx="300" cy="110" r="45" fill="#031958" stroke="#C7A97B" stroke-width="2.5"/>
+  <path d="M 290,90 C 295,85 305,85 310,90 C 318,95 318,105 315,115 C 312,122 308,130 304,130 C 302,130 300,122 300,118 C 300,122 298,130 296,130 C 292,130 288,122 285,115 C 282,105 282,95 290,90 Z" fill="url(#goldGrad)" />
+
+  <text x="300" y="180" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="14" font-weight="700" letter-spacing="1">SHRI KRISHNA DENTAL HOSPITAL</text>
+  <text x="300" y="200" text-anchor="middle" fill="#C7A97B" font-family="'Montserrat', sans-serif" font-size="11">Excellence in Advanced Dental Care</text>
+</svg>

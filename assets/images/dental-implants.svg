@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="implantBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031958" />
+      <stop offset="100%" stop-color="#010d30" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7A97B" />
+      <stop offset="100%" stop-color="#AC895B" />
+    </linearGradient>
+    <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#D4D5D7" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="380" rx="16" fill="url(#implantBg)"/>
+  <circle cx="250" cy="190" r="130" fill="url(#goldGrad)" opacity="0.06"/>
+  
+  <!-- Anatomical Jawbone / Gum Base Contour -->
+  <path d="M 80,240 Q 250,220 420,240 L 420,330 L 80,330 Z" fill="#08216b" stroke="#C7A97B" stroke-width="1.5" opacity="0.4"/>
+  <text x="95" y="315" fill="#C7A97B" font-family="sans-serif" font-size="11" letter-spacing="1">BONE STRUCTURE INTEGRATION</text>
+
+  <!-- Crown (Top Restoration) -->
+  <path d="M 200,90 C 215,60 285,60 300,90 C 315,115 310,150 285,160 C 265,165 235,165 215,160 C 190,150 185,115 200,90 Z" fill="url(#crownGrad)" stroke="#C7A97B" stroke-width="2"/>
+  <text x="320" y="115" fill="#ffffff" font-family="'Cinzel', serif" font-size="12" font-weight="600">1. Prosthetic Crown</text>
+  <line x1="290" y1="110" x2="315" y2="110" stroke="#C7A97B" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Abutment (Connector) -->
+  <polygon points="230,160 270,160 260,195 240,195" fill="url(#goldGrad)" stroke="#C7A97B" stroke-width="1.5"/>
+  <text x="320" y="180" fill="#C7A97B" font-family="'Cinzel', serif" font-size="12" font-weight="600">2. Titanium Abutment</text>
+  <line x1="265" y1="175" x2="315" y2="175" stroke="#C7A97B" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Fixture (Screw Threads) -->
+  <g transform="translate(0, 0)">
+    <path d="M 235,195 L 265,195 L 260,285 C 255,298 245,298 240,285 Z" fill="#1e3a8a" stroke="#C7A97B" stroke-width="2"/>
+    <!-- Precision Thread Rings -->
+    <line x1="234" y1="210" x2="266" y2="210" stroke="#C7A97B" stroke-width="2.5"/>
+    <line x1="236" y1="225" x2="264" y2="225" stroke="#C7A97B" stroke-width="2.5"/>
+    <line x1="237" y1="240" x2="263" y2="240" stroke="#C7A97B" stroke-width="2.5"/>
+    <line x1="239" y1="255" x2="261" y2="255" stroke="#C7A97B" stroke-width="2.5"/>
+    <line x1="241" y1="270" x2="259" y2="270" stroke="#C7A97B" stroke-width="2.5"/>
+  </g>
+  <text x="320" y="245" fill="#ffffff" font-family="'Cinzel', serif" font-size="12" font-weight="600">3. Implant Fixture</text>
+  <line x1="265" y1="240" x2="315" y2="240" stroke="#C7A97B" stroke-width="1.5" stroke-dasharray="3,3"/>
+</svg>

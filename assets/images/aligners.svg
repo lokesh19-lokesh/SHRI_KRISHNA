@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="alignBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031958" />
+      <stop offset="100%" stop-color="#010d30" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7A97B" />
+      <stop offset="100%" stop-color="#AC895B" />
+    </linearGradient>
+    <linearGradient id="trayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#C7A97B" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="380" rx="16" fill="url(#alignBg)"/>
+  <circle cx="250" cy="190" r="140" fill="url(#goldGrad)" opacity="0.07"/>
+
+  <!-- Dental Arch Base (Teeth alignment contour) -->
+  <path d="M 100,270 Q 250,70 400,270" fill="none" stroke="#08298a" stroke-width="45" stroke-linecap="round"/>
+  
+  <!-- Individual Natural Teeth in Arch -->
+  <g fill="#f8fafc" stroke="#031958" stroke-width="1.5">
+    <ellipse cx="140" cy="235" rx="14" ry="18" transform="rotate(-30 140 235)" />
+    <ellipse cx="175" cy="190" rx="15" ry="19" transform="rotate(-20 175 190)" />
+    <ellipse cx="215" cy="158" rx="16" ry="20" transform="rotate(-10 215 158)" />
+    <ellipse cx="250" cy="148" rx="17" ry="22" />
+    <ellipse cx="285" cy="158" rx="16" ry="20" transform="rotate(10 285 158)" />
+    <ellipse cx="325" cy="190" rx="15" ry="19" transform="rotate(20 325 190)" />
+    <ellipse cx="360" cy="235" rx="14" ry="18" transform="rotate(30 360 235)" />
+  </g>
+
+  <!-- Clear Aligner Overlay Shell (High-tech transparent tray) -->
+  <path d="M 85,280 C 130,130 370,130 415,280 C 390,290 350,225 320,185 C 275,140 225,140 180,185 C 150,225 110,290 85,280 Z" fill="url(#trayGrad)" stroke="#C7A97B" stroke-width="2" />
+  
+  <!-- Brand Focus Floating Labels -->
+  <g transform="translate(45, 320)">
+    <rect x="0" y="0" width="125" height="32" rx="6" fill="#02113D" stroke="#C7A97B" stroke-width="1.5"/>
+    <text x="12" y="20" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="11" font-weight="600">INVISALIGN</text>
+  </g>
+  <g transform="translate(185, 320)">
+    <rect x="0" y="0" width="125" height="32" rx="6" fill="#02113D" stroke="#C7A97B" stroke-width="1.5"/>
+    <text x="18" y="20" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="11" font-weight="600">SPARK</text>
+  </g>
+  <g transform="translate(325, 320)">
+    <rect x="0" y="0" width="130" height="32" rx="6" fill="#02113D" stroke="#C7A97B" stroke-width="1.5"/>
+    <text x="12" y="20" fill="#C7A97B" font-family="'Montserrat', sans-serif" font-size="11" font-weight="600">IN-HOUSE</text>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pedBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031958" />
+      <stop offset="100%" stop-color="#010d30" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7A97B" />
+      <stop offset="100%" stop-color="#AC895B" />
+    </linearGradient>
+  </defs>
+  <rect width="500" height="380" rx="16" fill="url(#pedBg)"/>
+
+  <!-- Friendly Shield & Tooth Icon -->
+  <path d="M 250,60 L 370,110 C 370,230 250,290 250,290 C 250,290 130,230 130,110 Z" fill="none" stroke="#C7A97B" stroke-width="3"/>
+  
+  <g transform="translate(180, 110)">
+    <path d="M 40,20 C 50,15 90,15 100,20 C 120,30 120,60 110,85 C 100,105 88,125 80,125 C 75,125 70,105 70,95 C 70,105 65,125 60,125 C 52,125 40,105 30,85 C 20,60 20,30 40,20 Z" fill="#ffffff" stroke="#C7A97B" stroke-width="2"/>
+    <!-- Gentle Smile on Tooth -->
+    <circle cx="50" cy="50" r="4" fill="#031958"/>
+    <circle cx="90" cy="50" r="4" fill="#031958"/>
+    <path d="M 55,68 Q 70,82 85,68" fill="none" stroke="#031958" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Stars of Care -->
+  <polygon points="170,100 175,115 190,115 178,125 182,140 170,130 158,140 162,125 150,115 165,115" fill="url(#goldGrad)" />
+  <polygon points="330,100 335,115 350,115 338,125 342,140 330,130 318,140 322,125 310,115 325,115" fill="url(#goldGrad)" />
+
+  <text x="250" y="340" text-anchor="middle" fill="#ffffff" font-family="'Cinzel', serif" font-size="16" font-weight="600" letter-spacing="1">GENTLE PEDIATRIC DENTISTRY</text>
+</svg>

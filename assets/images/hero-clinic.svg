@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031958" />
+      <stop offset="100%" stop-color="#010d30" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7A97B" />
+      <stop offset="100%" stop-color="#AC895B" />
+    </linearGradient>
+    <linearGradient id="chairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Card Canvas -->
+  <rect width="600" height="450" rx="20" fill="url(#heroBg)"/>
+  
+  <!-- Architectural Ambient Glow -->
+  <circle cx="480" cy="120" r="180" fill="url(#goldGrad)" opacity="0.08" />
+  <circle cx="120" cy="380" r="140" fill="#08298a" opacity="0.4" />
+
+  <!-- Modern Operatory Architectural Grid Lines -->
+  <path d="M 0,350 L 600,350" stroke="#C7A97B" stroke-width="1.5" opacity="0.2" />
+  <path d="M 150,0 L 150,350" stroke="#C7A97B" stroke-width="1" stroke-dasharray="4,6" opacity="0.15" />
+  <path d="M 450,0 L 450,350" stroke="#C7A97B" stroke-width="1" stroke-dasharray="4,6" opacity="0.15" />
+
+  <!-- High-End Dental Chair Base & Support -->
+  <path d="M 240,350 L 360,350 L 330,300 L 270,300 Z" fill="#0b1a4a" stroke="#C7A97B" stroke-width="2" />
+  <path d="M 285,300 L 285,240 L 315,240 L 315,300 Z" fill="#132766" stroke="#C7A97B" stroke-width="1.5" />
+  
+  <!-- Ergonomic Dental Chair Seat & Backrest -->
+  <path d="M 200,245 C 230,240 310,240 380,225 C 410,220 420,240 395,260 C 330,275 240,270 200,265 Z" fill="url(#chairGrad)" stroke="#C7A97B" stroke-width="2" />
+  <path d="M 180,240 C 160,200 170,160 210,135 C 225,125 240,140 230,165 C 215,195 210,225 200,245 Z" fill="url(#chairGrad)" stroke="#C7A97B" stroke-width="2" />
+  <ellipse cx="225" cy="130" rx="26" ry="16" fill="#1e3a8a" stroke="#C7A97B" stroke-width="2" transform="rotate(-20 225 130)" />
+
+  <!-- Overhead Surgical LED Dental Lamp -->
+  <path d="M 460,350 L 460,110 L 380,110 L 360,140" fill="none" stroke="#C7A97B" stroke-width="4" stroke-linecap="round" />
+  <ellipse cx="350" cy="145" rx="34" ry="14" fill="#ffffff" stroke="#C7A97B" stroke-width="2" transform="rotate(25 350 145)" />
+  <polygon points="325,155 180,300 370,300" fill="url(#glowGrad)" />
+
+  <!-- Digital Treatment Monitoring Screen -->
+  <rect x="420" y="80" width="130" height="90" rx="8" fill="#02113D" stroke="#C7A97B" stroke-width="2" />
+  <path d="M 440,125 Q 465,95 485,125 T 530,125" fill="none" stroke="#C7A97B" stroke-width="2.5" />
+  <circle cx="485" cy="125" r="4" fill="#C7A97B" />
+  <text x="440" y="102" fill="#C7A97B" font-family="sans-serif" font-size="9" font-weight="bold" letter-spacing="1">DENTAL SCAN 3D</text>
+  <rect x="440" y="145" width="40" height="6" rx="3" fill="#08298a" />
+  <rect x="490" y="145" width="40" height="6" rx="3" fill="#C7A97B" opacity="0.6" />
+
+  <!-- Central Tooth Icon Silhouette / Emblem Accent -->
+  <g transform="translate(70, 70)">
+    <circle cx="40" cy="40" r="38" fill="#031958" stroke="#C7A97B" stroke-width="2" />
+    <path d="M 30,22 C 35,20 45,20 50,22 C 58,25 58,35 55,46 C 53,54 48,62 44,62 C 41,62 40,54 40,50 C 40,54 39,62 36,62 C 32,62 27,54 25,46 C 22,35 22,25 30,22 Z" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Hospital Brand Accent Tag -->
+  <g transform="translate(50, 390)">
+    <rect x="0" y="0" width="220" height="34" rx="8" fill="#02113D" stroke="#C7A97B" stroke-width="1.5" />
+    <text x="15" y="22" fill="#ffffff" font-family="'Cinzel', serif" font-size="11" font-weight="600" letter-spacing="1">SHRI KRISHNA DENTAL</text>
+  </g>
+</svg>
