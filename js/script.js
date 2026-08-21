@@ -138,10 +138,10 @@ function initMobileMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   6. CLIENT-SIDE FORM VALIDATION & FEEDBACK
+   6. CLIENT-SIDE FORM VALIDATION & REDIRECTION TO THANK YOU PAGE
    -------------------------------------------------------------------------- */
 function initFormValidation() {
-  const forms = document.querySelectorAll('.needs-validation');
+  const forms = document.querySelectorAll('form, .needs-validation, #appointmentForm, #contactInquiryForm, #lpAppointmentForm');
 
   Array.from(forms).forEach((form) => {
     form.addEventListener(
@@ -157,24 +157,17 @@ function initFormValidation() {
 
         form.classList.add('was-validated');
 
-        // Display user-friendly submission confirmation without pretending to be a real backend
-        const feedbackContainer = form.querySelector('.form-submission-feedback');
-        if (feedbackContainer) {
-          feedbackContainer.innerHTML = `
-            <div class="alert alert-success d-flex align-items-center mt-3" role="alert">
-              <i class="bi bi-check-circle-fill me-2 fs-5"></i>
-              <div>
-                <strong>Thank you!</strong> Your consultation request has been received. Our patient care team will contact you shortly to confirm your schedule.
-              </div>
-            </div>
-          `;
-          feedbackContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        } else {
-          alert('Thank you! Your request has been recorded. Our team will contact you soon.');
+        // Provide immediate visual loading state on submit button
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
         }
 
-        form.reset();
-        form.classList.remove('was-validated');
+        // Redirect to thank you page
+        setTimeout(() => {
+          window.location.href = 'thank-you.html';
+        }, 400);
       },
       false
     );
