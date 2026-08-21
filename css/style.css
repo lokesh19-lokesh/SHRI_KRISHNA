@@ -1231,6 +1231,15 @@ img {
     padding-bottom: 65px;
   }
 
+  .back-to-top-btn {
+    bottom: 75px !important;
+    right: 16px !important;
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 1.1rem !important;
+    z-index: 1050 !important;
+  }
+
   .hero-section {
     padding: 4.5rem 0 3.5rem;
   }
