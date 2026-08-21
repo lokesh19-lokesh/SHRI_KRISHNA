@@ -269,7 +269,7 @@ img {
   top: 0;
   z-index: 1030;
   background-color: var(--royal-navy);
-  padding: 0.85rem 0;
+  padding: 0.65rem 0;
   transition: padding 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
   border-bottom: 2px solid rgba(199, 169, 123, 0.25);
 }
@@ -278,7 +278,7 @@ img {
   background-color: rgba(3, 25, 88, 0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 0.6rem 0;
+  padding: 0.45rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -286,33 +286,41 @@ img {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  padding: 2px 0;
 }
 
 .brand-logo-img {
-  height: 50px;
+  height: 68px;
   width: auto;
-  max-width: 260px;
+  max-width: 320px;
   object-fit: contain;
   display: block;
   transition: var(--transition-smooth);
 }
 
 .brand-logo-wrap:hover .brand-logo-img {
-  transform: translateY(-1px);
+  transform: scale(1.02);
 }
 
 .footer-logo-img {
-  height: 54px;
+  height: 72px;
   width: auto;
-  max-width: 270px;
+  max-width: 340px;
   object-fit: contain;
   display: block;
 }
 
+@media (max-width: 991.98px) {
+  .brand-logo-img {
+    height: 56px;
+    max-width: 260px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .brand-logo-img {
-    height: 40px;
-    max-width: 210px;
+    height: 48px;
+    max-width: 230px;
   }
 }
 
