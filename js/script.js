@@ -20,7 +20,7 @@ function initStickyNavbar() {
   if (!navbar) return;
 
   const handleScroll = () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       navbar.classList.add('is-sticky');
     } else {
       navbar.classList.remove('is-sticky');
@@ -72,10 +72,18 @@ function initScrollReveal() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.02, rootMargin: '150px 0px 150px 0px' }
     );
 
-    reveals.forEach((el) => observer.observe(el));
+    reveals.forEach((el) => {
+      // If already within or above the viewport on initial render, activate immediately
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 150) {
+        el.classList.add('active');
+      } else {
+        observer.observe(el);
+      }
+    });
   } else {
     // Fallback for browsers without IntersectionObserver
     reveals.forEach((el) => el.classList.add('active'));
