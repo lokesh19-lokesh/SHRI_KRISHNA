@@ -740,6 +740,183 @@ img {
 }
 
 /* --------------------------------------------------------------------------
+   6.5. SMILE TRANSFORMATION & CONSULTATION SHOWCASE SECTION
+   -------------------------------------------------------------------------- */
+.smile-transformation-section {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-consultation {
+  padding: 0.85rem 1.65rem;
+  font-weight: 600;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #031958 0%, #062b8c 100%);
+  color: #ffffff;
+  border: 1px solid var(--champagne-gold);
+  transition: var(--transition-smooth);
+}
+
+.btn-consultation:hover {
+  background: linear-gradient(135deg, #C7A97B 0%, #a8844f 100%);
+  color: var(--dark-navy);
+  border-color: var(--champagne-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(199, 169, 123, 0.35);
+}
+
+.btn-pulse-call {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.85rem 1.6rem;
+  transition: var(--transition-smooth);
+  animation: callButtonPulse 3s infinite ease-in-out;
+}
+
+@keyframes callButtonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(3, 25, 88, 0.25);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(3, 25, 88, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(3, 25, 88, 0);
+  }
+}
+
+.btn-call-icon {
+  display: inline-block;
+  animation: phoneRing 2.4s infinite ease-in-out;
+  color: var(--rich-gold);
+}
+
+@keyframes phoneRing {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  10%, 30% {
+    transform: rotate(-14deg) scale(1.15);
+  }
+  20%, 40% {
+    transform: rotate(14deg) scale(1.15);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.doctor-showcase-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.doctor-cutout-img {
+  max-width: 100%;
+  width: auto;
+  max-height: 490px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(3, 25, 88, 0.1));
+  transition: transform 0.4s ease;
+}
+
+.doctor-cutout-img:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.consultation-stats-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.2rem 2.8rem;
+  border: 1.5px solid rgba(199, 169, 123, 0.3);
+  box-shadow: 0 14px 40px rgba(3, 25, 88, 0.08);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+}
+
+.stat-icon-blue {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+
+.stat-icon-green {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.stat-icon-cyan {
+  background: rgba(8, 145, 178, 0.12);
+  color: #0891b2;
+}
+
+.stat-icon-gold {
+  background: rgba(199, 169, 123, 0.2);
+  color: var(--rich-gold);
+}
+
+.stat-num {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 2px;
+  letter-spacing: -0.5px;
+}
+
+.stat-label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .doctor-blob-bg {
+    width: 290px;
+    height: 290px;
+  }
+  .consultation-stats-card {
+    padding: 1.5rem 1.2rem;
+  }
+  .stat-item {
+    gap: 0.75rem;
+  }
+  .stat-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+  }
+  .stat-num {
+    font-size: 1.3rem;
+  }
+  .stat-label {
+    font-size: 0.74rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
    7. TRUST & INTRODUCTION SECTION (PATIENT-FIRST PHILOSOPHY)
    -------------------------------------------------------------------------- */
 .philosophy-section {
