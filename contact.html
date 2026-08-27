@@ -279,7 +279,7 @@
   </section>
 
   <!-- Interactive Map / Location Section -->
-  <section class="section-padding bg-light">
+  <section class="section-padding bg-light" id="clinic-location">
     <div class="container">
       <div class="text-center mb-4 reveal">
         <span class="eyebrow eyebrow-navy">FIND US ON THE MAP</span>
@@ -291,16 +291,23 @@
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-lg-10 reveal">
-          <div class="p-4 bg-white rounded-3 shadow-sm border border-gold-subtle text-center">
-            <div class="p-5 bg-subtle rounded-3 d-flex flex-column align-items-center justify-content-center" style="min-height: 280px;">
-              <i class="bi bi-geo-alt-fill text-gold fs-1 mb-3"></i>
-              <h3 class="h5 text-navy fw-bold mb-2">Shri Krishna Dental Hospital</h3>
-              <p class="text-muted small mb-3">Ground Floor, Allwyn X Roads, near Bank of India, Allwyn X Road, Widia Colony, Hafeezpet, Miyapur, Hyderabad, Telangana 500049</p>
-              <a href="https://maps.google.com/?q=Shri+Krishna+Dental+Hospital+Allwyn+X+Roads+Miyapur+Hyderabad" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">
-                <i class="bi bi-box-arrow-up-right me-1"></i> Open Location in Google Maps
-              </a>
-            </div>
+        <div class="col-lg-11 reveal">
+          <div class="map-embed-wrapper p-2 bg-white rounded-4 shadow-sm border border-gold-subtle overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30442.465947014753!2d78.31453127431637!3d17.492793100000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9268542e81eb%3A0xc41741d2b955accf!2sShri%20Krishna%20Dental%20Hospital!5e0!3m2!1sen!2sin!4v1787832858720!5m2!1sen!2sin" 
+              width="100%" 
+              height="450" 
+              style="border:0; border-radius: 12px; display: block;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Shri Krishna Dental Hospital Google Maps Location">
+            </iframe>
+          </div>
+          <div class="text-center mt-3">
+            <a href="https://maps.google.com/?q=Shri+Krishna+Dental+Hospital+Allwyn+X+Roads+Miyapur+Hyderabad" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Open Location in Google Maps App
+            </a>
           </div>
         </div>
       </div>
