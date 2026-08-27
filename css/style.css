@@ -514,12 +514,56 @@ img {
   padding: 0.7rem 1.1rem;
   max-width: 560px;
   box-shadow: 0 6px 18px rgba(0, 107, 79, 0.1);
-  transition: var(--transition-smooth);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+}
+
+.hero-ehs-strip.ehs-animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: ehsCardPulse 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+.hero-ehs-strip.ehs-animate-in .hero-ehs-icon-wrap {
+  animation: ehsIconPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s backwards,
+             ehsIconPulse 3s ease-in-out 1.2s infinite;
+}
+
+.hero-ehs-strip.ehs-animate-in .hero-ehs-pill {
+  animation: ehsPillSlide 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+}
+
+/* Shimmer reflection sweep effect across EHS card */
+.hero-ehs-strip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.hero-ehs-strip.ehs-animate-in::after {
+  animation: ehsShimmerSweep 1.8s ease 0.6s forwards;
 }
 
 .hero-ehs-strip:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0, 107, 79, 0.15);
+  box-shadow: 0 10px 24px rgba(0, 107, 79, 0.18);
   border-color: var(--ehs-green);
 }
 
@@ -565,6 +609,63 @@ img {
 .hero-ehs-strip .text-highlight-green {
   color: var(--ehs-green);
   font-weight: 700;
+}
+
+@keyframes ehsCardPulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 107, 79, 0.08);
+  }
+  50% {
+    box-shadow: 0 14px 30px rgba(0, 107, 79, 0.24);
+  }
+  100% {
+    box-shadow: 0 6px 18px rgba(0, 107, 79, 0.1);
+  }
+}
+
+@keyframes ehsIconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.35) rotate(-15deg);
+  }
+  70% {
+    transform: scale(1.22) rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes ehsIconPulse {
+  0%, 100% {
+    box-shadow: 0 3px 10px rgba(0, 107, 79, 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(0, 107, 79, 0.6);
+    transform: scale(1.06);
+  }
+}
+
+@keyframes ehsPillSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ehsShimmerSweep {
+  0% {
+    left: -120%;
+  }
+  100% {
+    left: 200%;
+  }
 }
 
 .hero-image-wrap {
@@ -1766,4 +1867,183 @@ img {
   font-size: 1.1rem;
   display: inline-flex;
   gap: 0.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   24. 3-SECOND LOGO INTRO PRELOADER ANIMATION
+   -------------------------------------------------------------------------- */
+.home-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #05247c 0%, #031958 45%, #010d30 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.65s ease;
+  overflow: hidden;
+}
+
+.home-preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  position: relative;
+  z-index: 2;
+}
+
+.preloader-logo-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.6rem;
+}
+
+.preloader-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(199, 169, 123, 0.35) 0%, rgba(3, 25, 88, 0) 70%);
+  border-radius: 50%;
+  animation: preloaderGlowPulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.preloader-logo {
+  height: 96px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
+  animation: preloaderLogoZoom 2.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.preloader-bar-wrap {
+  width: 190px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.preloader-bar-fill {
+  width: 0%;
+  height: 100%;
+  background: var(--gold-gradient);
+  box-shadow: 0 0 12px rgba(199, 169, 123, 0.9);
+  border-radius: 10px;
+  animation: preloaderBarProgress 2.5s cubic-bezier(0.1, 0.7, 0.1, 1) forwards;
+}
+
+.preloader-ehs-badge {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(199, 169, 123, 0.35);
+  border-left: 4px solid var(--ehs-green);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  max-width: 520px;
+  margin-top: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: preloaderEhsFade 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+}
+
+.preloader-ehs-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--ehs-green);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 0.2rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.35rem;
+  box-shadow: 0 2px 8px rgba(0, 107, 79, 0.4);
+}
+
+.preloader-ehs-text {
+  color: #e2e8f0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.preloader-ehs-text strong {
+  color: #ffffff;
+}
+
+@keyframes preloaderEhsFade {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes preloaderLogoZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes preloaderGlowPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.88);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.85;
+  }
+}
+
+@keyframes preloaderBarProgress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 65%;
+  }
+  100% {
+    width: 100%;
+  }
 }

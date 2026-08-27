@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHomePreloader();
   initStickyNavbar();
   initActiveNavLink();
   initScrollReveal();
@@ -172,4 +173,33 @@ function initFormValidation() {
       false
     );
   });
+}
+
+/* --------------------------------------------------------------------------
+   7. 3-SECOND HOME LOGO INTRO & EHS BANNER ANIMATION
+   -------------------------------------------------------------------------- */
+function initHomePreloader() {
+  const preloader = document.getElementById('homePreloader');
+  const ehsStrip = document.querySelector('.hero-ehs-strip');
+
+  if (preloader) {
+    // 3-second animated logo intro
+    setTimeout(() => {
+      preloader.classList.add('preloader-hidden');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+        // Trigger EHS animated entrance after preloader fades out
+        if (ehsStrip) {
+          ehsStrip.classList.add('ehs-animate-in');
+        }
+      }, 550);
+    }, 2600);
+  } else {
+    // If loaded without preloader, animate EHS strip shortly after DOM is ready
+    if (ehsStrip) {
+      setTimeout(() => {
+        ehsStrip.classList.add('ehs-animate-in');
+      }, 350);
+    }
+  }
 }
