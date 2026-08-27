@@ -818,12 +818,23 @@ img {
 /* --------------------------------------------------------------------------
    8. SERVICES GRID & CARDS
    -------------------------------------------------------------------------- */
+.services-section {
+  position: relative;
+  background: radial-gradient(circle at 12% 18%, rgba(199, 169, 123, 0.12) 0%, transparent 45%),
+              radial-gradient(circle at 88% 82%, rgba(3, 25, 88, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.7) 0%, transparent 70%),
+              linear-gradient(165deg, #f5f8fc 0%, #eaf1fa 50%, #eff5fc 100%);
+  border-top: 1px solid rgba(199, 169, 123, 0.25);
+  border-bottom: 1px solid rgba(199, 169, 123, 0.25);
+  overflow: hidden;
+}
+
 .service-card {
   background: #ffffff;
   border-radius: 16px;
   padding: 1.25rem 1.25rem 1.4rem;
-  border: 1px solid rgba(199, 169, 123, 0.28);
-  box-shadow: 0 4px 16px rgba(3, 25, 88, 0.06);
+  border: 1px solid rgba(199, 169, 123, 0.32);
+  box-shadow: 0 8px 24px rgba(3, 25, 88, 0.07);
   transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
