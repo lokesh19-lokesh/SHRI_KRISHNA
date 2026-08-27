@@ -827,7 +827,6 @@ img {
   width: auto;
   max-height: 520px;
   display: block;
-  vertical-align: bottom;
   filter: drop-shadow(0 15px 30px rgba(3, 25, 88, 0.1));
   transition: transform 0.4s ease;
 }
