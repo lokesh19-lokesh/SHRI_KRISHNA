@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   initMobileMenu();
   initTestimonialsSlider();
+  initCountUpStats();
 });
 
 /* --------------------------------------------------------------------------
@@ -368,4 +369,54 @@ function initTestimonialsSlider() {
     isDragging = false;
     isPaused = false;
   });
+}
+
+/* --------------------------------------------------------------------------
+   9. COUNT-UP NUMERICAL ANIMATIONS
+   -------------------------------------------------------------------------- */
+function initCountUpStats() {
+  const statElements = document.querySelectorAll('.count-up-stat');
+  if (!statElements.length) return;
+
+  const animateCount = (el) => {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    if (isNaN(target)) return;
+
+    const duration = 1800; // 1.8 seconds smooth animation
+    const startTime = performance.now();
+
+    const updateCounter = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Smooth deceleration curve (easeOutCubic)
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(easeOut * target);
+
+      el.textContent = currentVal.toLocaleString() + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        el.textContent = target.toLocaleString() + suffix;
+      }
+    };
+
+    requestAnimationFrame(updateCounter);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    statElements.forEach((el) => observer.observe(el));
+  } else {
+    statElements.forEach((el) => animateCount(el));
+  }
 }
