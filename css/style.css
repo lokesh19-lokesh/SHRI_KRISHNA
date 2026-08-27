@@ -58,7 +58,10 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 85px;
   font-size: 16px;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -66,7 +69,9 @@ body {
   color: var(--text-dark);
   background-color: var(--bg-light);
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -290,9 +295,9 @@ img {
 }
 
 .brand-logo-img {
-  height: 52px;
+  height: 58px;
   width: auto;
-  max-width: 250px;
+  max-width: 280px;
   object-fit: contain;
   display: block;
   transition: var(--transition-smooth);
@@ -303,31 +308,31 @@ img {
 }
 
 .footer-logo-img {
-  height: 64px;
+  height: 68px;
   width: auto;
-  max-width: 300px;
+  max-width: 320px;
   object-fit: contain;
   display: block;
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .brand-logo-img {
-    height: 44px;
-    max-width: 180px;
+    height: 48px;
+    max-width: 210px;
   }
 }
 
 @media (max-width: 991.98px) {
   .brand-logo-img {
-    height: 48px;
-    max-width: 220px;
+    height: 50px;
+    max-width: 230px;
   }
 }
 
 @media (max-width: 767.98px) {
   .brand-logo-img {
-    height: 42px;
-    max-width: 190px;
+    height: 46px;
+    max-width: 210px;
   }
 }
 
@@ -1525,7 +1530,7 @@ img {
     justify-content: space-between;
     gap: 0.4rem;
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     max-width: 100%;
   }
   
@@ -1533,7 +1538,7 @@ img {
     flex: 1 1 0 !important;
     min-width: 0 !important;
     padding: 0.55rem 0.35rem !important;
-    font-size: 0.8rem !important;
+    font-size: 0.78rem !important;
     font-weight: 600 !important;
     letter-spacing: 0.2px !important;
     border-radius: 8px !important;
@@ -1546,50 +1551,147 @@ img {
   }
   
   .floating-action-bar .btn i {
-    font-size: 0.9rem !important;
+    font-size: 0.88rem !important;
     flex-shrink: 0;
   }
 
   body {
-    padding-bottom: 65px;
+    padding-bottom: 85px;
   }
 
   .whatsapp-float-btn {
-    bottom: 75px !important;
-    left: 16px !important;
-    right: auto !important;
-    width: 44px !important;
-    height: 44px !important;
-    font-size: 1.35rem !important;
+    bottom: 78px !important;
+    right: 16px !important;
+    left: auto !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.45rem !important;
     z-index: 1050 !important;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45) !important;
   }
 
   .back-to-top-btn {
-    bottom: 75px !important;
+    bottom: 135px !important;
     right: 16px !important;
-    width: 42px !important;
-    height: 42px !important;
-    font-size: 1.1rem !important;
+    left: auto !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.05rem !important;
     z-index: 1050 !important;
   }
 
+  .navbar-custom {
+    padding: 0.55rem 0;
+  }
+
+  .brand-logo-img {
+    height: 46px !important;
+    max-width: 210px !important;
+  }
+
+  .navbar-toggler {
+    padding: 0.3rem 0.6rem;
+    font-size: 1.2rem;
+  }
+
   .hero-section {
-    padding: 3rem 0 2.5rem;
+    padding: 3.2rem 0 3.8rem;
+  }
+
+  .hero-section .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
   }
 
   .hero-title {
-    font-size: 1.95rem;
+    font-size: clamp(1.85rem, 6.8vw, 2.3rem);
     line-height: 1.22;
+    margin-bottom: 0.8rem;
   }
 
   .hero-tagline {
     font-size: 1.02rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .hero-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1.4rem;
   }
 
   .hero-section .d-flex.flex-wrap.gap-3.mb-3 .btn,
   .hero-section .d-flex.flex-wrap.gap-3.pt-2 .btn {
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.92rem;
+    padding: 0.72rem 1.2rem;
+  }
+
+  .hero-ehs-strip {
+    padding: 0.85rem 1.15rem;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 0.85rem !important;
+  }
+
+  .hero-ehs-icon-wrap {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 1.15rem;
+    border-radius: 8px;
+  }
+
+  .hero-ehs-pill {
+    font-size: 0.68rem;
+    padding: 0.16rem 0.55rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-ehs-strip .text-dark-subtle {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .hero-image-wrap {
+    margin-top: 1.5rem;
+  }
+
+  .hero-image-frame {
+    border-radius: 16px;
+  }
+
+  .hero-image-frame img {
+    height: 270px;
+  }
+
+  .hero-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    border-radius: 10px;
+    padding: 0.6rem 0.9rem;
+    box-shadow: 0 8px 22px rgba(3, 25, 88, 0.15);
+  }
+
+  .hero-badge-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+
+  .hero-badge-title {
+    font-size: 0.82rem;
+  }
+
+  .hero-badge-subtitle {
+    font-size: 0.72rem;
   }
 }
 
@@ -1876,8 +1978,10 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(circle at center, #05247c 0%, #031958 45%, #010d30 100%);
   display: flex;
   align-items: center;
@@ -2045,5 +2149,32 @@ img {
   }
   100% {
     width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .preloader-logo {
+    height: 64px;
+    max-width: 220px;
+  }
+  .preloader-glow {
+    width: 170px;
+    height: 170px;
+  }
+  .preloader-bar-wrap {
+    width: 140px;
+    margin-bottom: 0.85rem;
+  }
+  .preloader-ehs-badge {
+    padding: 0.6rem 0.85rem;
+    max-width: 94%;
+  }
+  .preloader-ehs-pill {
+    font-size: 0.64rem;
+    padding: 0.15rem 0.55rem;
+  }
+  .preloader-ehs-text {
+    font-size: 0.76rem;
+    line-height: 1.35;
   }
 }
