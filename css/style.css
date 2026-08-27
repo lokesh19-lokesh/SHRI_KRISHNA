@@ -957,6 +957,12 @@ img {
   transition: transform 0.5s ease;
 }
 
+.doctor-card-img.doctor-img-contain {
+  object-fit: contain;
+  object-position: center bottom;
+  padding: 10px;
+}
+
 .doctor-profile-card:hover .doctor-card-img {
   transform: scale(1.04);
 }

@@ -8,6 +8,9 @@
   <meta name="keywords" content="dentists Hyderabad, dental specialists, implantologist, orthodontist, endodontist, pediatric dentist, Shri Krishna Dental Hospital doctors">
   <link rel="canonical" href="https://shrikrishnadental.com/doctors.html">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo/logo.png">
+
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
@@ -21,38 +24,30 @@
 </head>
 <body>
 
-  <!-- Top Announcement Bar (Rebranding & EHS Badge) -->
-  <div class="top-bar py-2">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-      <div class="d-flex align-items-center gap-3">
-        <span class="badge bg-gold text-dark fw-bold text-uppercase px-2 py-1">Legacy Notice</span>
-        <span class="small text-white-50">Formerly known as <strong>Jo'Dent Dental Clinic</strong></span>
+  <!-- Top Bar -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex gap-4">
+        <span><i class="bi bi-clock text-champagne me-2"></i>Mon - Sat: 9:00 AM - 8:00 PM</span>
+        <span><i class="bi bi-geo-alt text-champagne me-2"></i>Allwyn X Roads, Miyapur, Hyderabad</span>
       </div>
-      <div class="d-flex align-items-center gap-3">
-        <span class="badge bg-navy-light text-champagne border border-secondary px-2 py-1 small">
-          <i class="bi bi-shield-check text-champagne me-1"></i> EHS Empanelled Under Aarogyasree
-        </span>
-        <div class="d-none d-md-flex align-items-center gap-2 text-white-50 small">
-          <i class="bi bi-telephone text-champagne"></i>
-          <span>Emergency / Appointments: <strong>+91 98490 00000</strong></span>
-        </div>
+      <div class="d-flex gap-3">
+        <span><i class="bi bi-telephone text-champagne me-2"></i><a href="tel:+919515425522">+91 95154 25522</a></span>
+        <span class="text-champagne">|</span>
+        <span class="text-ivory"><i class="bi bi-shield-check text-champagne me-1"></i> EHS Empanelled</span>
       </div>
     </div>
   </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" id="mainNavbar">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/images/logo.png" alt="Shri Krishna Dental Hospital Logo" class="brand-logo me-2">
-        <div class="brand-text">
-          <span class="brand-title">SHRI KRISHNA</span>
-          <span class="brand-sub">DENTAL HOSPITAL</span>
-        </div>
+      <a class="navbar-brand brand-logo-wrap" href="index.html">
+        <img src="assets/logo/logo.png" alt="Shri Krishna Dental Hospital" class="brand-logo-img">
       </a>
-      
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-3"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarMain">
@@ -64,22 +59,22 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="doctors.html">Our Doctors</a>
+            <a class="nav-link active" aria-current="page" href="doctors.html">Our Doctors</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Services
             </a>
             <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="services.html"><i class="bi bi-grid me-2 text-champagne"></i>All Dental Services</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="dental-implants.html"><i class="bi bi-check2 me-2 text-champagne"></i>Dental Implants</a></li>
-              <li><a class="dropdown-item" href="aligners.html"><i class="bi bi-check2 me-2 text-champagne"></i>Clear Aligners</a></li>
-              <li><a class="dropdown-item" href="orthodontic-treatment.html"><i class="bi bi-check2 me-2 text-champagne"></i>Orthodontic Treatment</a></li>
-              <li><a class="dropdown-item" href="laser-dentistry.html"><i class="bi bi-check2 me-2 text-champagne"></i>Laser Dentistry</a></li>
-              <li><a class="dropdown-item" href="root-canal-treatment.html"><i class="bi bi-check2 me-2 text-champagne"></i>Root Canal Treatment</a></li>
-              <li><a class="dropdown-item" href="pediatric-dentistry.html"><i class="bi bi-check2 me-2 text-champagne"></i>Pediatric Dentistry</a></li>
-              <li><a class="dropdown-item" href="cosmetic-dentistry.html"><i class="bi bi-check2 me-2 text-champagne"></i>Cosmetic Dentistry</a></li>
+              <li><a class="dropdown-item" href="services.html"><i class="bi bi-grid-fill me-2 text-champagne"></i>All Dental Services</a></li>
+              <li><hr class="dropdown-divider border-gold-subtle"></li>
+              <li><a class="dropdown-item" href="dental-implants.html">Dental Implants</a></li>
+              <li><a class="dropdown-item" href="aligners.html">Aligners (Invisalign & Spark)</a></li>
+              <li><a class="dropdown-item" href="orthodontic-treatment.html">Orthodontic Treatment</a></li>
+              <li><a class="dropdown-item" href="laser-dentistry.html">Laser Dentistry</a></li>
+              <li><a class="dropdown-item" href="root-canal-treatment.html">Root Canal Treatment</a></li>
+              <li><a class="dropdown-item" href="pediatric-dentistry.html">Pediatric Dentistry</a></li>
+              <li><a class="dropdown-item" href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -91,9 +86,9 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-gold btn-sm d-flex align-items-center" href="appointment.html">
-              <i class="bi bi-calendar-check me-2"></i>Book Appointment
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a href="appointment.html" class="btn btn-gold btn-sm-custom">
+              <i class="bi bi-calendar-check"></i> Book Appointment
             </a>
           </li>
         </ul>
@@ -101,33 +96,51 @@
     </div>
   </nav>
 
-  <!-- Page Header / Hero -->
-  <header class="page-header text-center position-relative">
-    <div class="container position-relative z-index-2">
-      <span class="eyebrow eyebrow-gold">OUR EXPERIENCED TEAM</span>
-      <h1 class="page-title text-white">Meet Our Dental Specialists</h1>
-      <p class="lead text-ivory max-w-700 mx-auto mt-2">
-        Dedicated clinicians combining advanced dental technology with gentle, ethical, and patient-centered care.
-      </p>
-      <nav aria-label="breadcrumb" class="mt-3">
-        <ol class="breadcrumb justify-content-center mb-0">
-          <li class="breadcrumb-item"><a href="index.html" class="text-champagne">Home</a></li>
-          <li class="breadcrumb-item active text-white" aria-current="page">Our Doctors</li>
+  <!-- Inner Hero Section -->
+  <header class="inner-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-custom">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Our Doctors</li>
         </ol>
       </nav>
+      <span class="eyebrow">OUR EXPERIENCED CLINICAL TEAM</span>
+      <h1 class="text-white mb-2">Meet Our Dental Specialists</h1>
+      <p class="text-champagne mb-0" style="font-size: 1.1rem;">
+        Dedicated clinicians combining advanced dental technology with gentle, ethical, and patient-centered care.
+      </p>
     </div>
   </header>
+
+  <!-- Rebranding Context Banner -->
+  <section class="py-4 bg-navy-gradient border-bottom border-gold-subtle">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          <span class="eyebrow text-champagne mb-1">CLINICAL EXCELLENCE</span>
+          <h2 class="h4 text-white mb-1">Shri Krishna Dental Hospital</h2>
+          <p class="text-ivory mb-0 small">
+            Previously operating as <strong>Jo'Dent Dental Clinic</strong>. Multidisciplinary specialists collaborating to deliver comprehensive, stress-free dental care.
+          </p>
+        </div>
+        <div class="flex-shrink-0">
+          <span class="badge bg-champagne text-navy px-3 py-2 fw-bold">15+ Years Mastery</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Doctors Introduction & Philosophy -->
   <section class="section-padding bg-white" id="doctors-intro">
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-6 reveal">
-          <span class="eyebrow eyebrow-navy">CLINICAL EXCELLENCE</span>
-          <h2>Multidisciplinary Dental Specialists Under One Roof</h2>
+          <span class="eyebrow">EXPERT COLLABORATION</span>
+          <h2 class="section-title">Multidisciplinary Dental Specialists Under One Roof</h2>
           <div class="gold-divider"></div>
           <p class="text-muted leading-relaxed mb-4">
-            At <strong>Shri Krishna Dental Hospital</strong>, our team comprises highly qualified MDS specialists and experienced dental surgeons across all primary disciplines of modern dentistry. We believe that true clinical excellence is achieved when diverse specialties collaborate seamlessly to design personalized treatment plans for every patient.
+            At <strong>Shri Krishna Dental Hospital</strong>, our team comprises highly qualified MDS specialists and senior dental surgeons across all primary disciplines of modern dentistry. We believe that true clinical excellence is achieved when diverse specialties collaborate seamlessly to design personalized, conservative treatment plans for every patient.
           </p>
           <div class="row g-3">
             <div class="col-sm-6">
@@ -135,7 +148,7 @@
                 <i class="bi bi-award-fill text-gold fs-4"></i>
                 <div>
                   <h4 class="h6 fw-bold text-navy mb-1">15+ Years Mastery</h4>
-                  <p class="text-muted small mb-0">Proven track record with over 15,000+ treated cases.</p>
+                  <p class="text-muted small mb-0">Proven clinical excellence with over 15,000+ happy smiles treated.</p>
                 </div>
               </div>
             </div>
@@ -144,7 +157,7 @@
                 <i class="bi bi-shield-fill-check text-gold fs-4"></i>
                 <div>
                   <h4 class="h6 fw-bold text-navy mb-1">Strict Sterilization</h4>
-                  <p class="text-muted small mb-0">Hospital-grade sterilization and global infection control.</p>
+                  <p class="text-muted small mb-0">Class-B autoclave sterilization and global cross-infection controls.</p>
                 </div>
               </div>
             </div>
@@ -164,22 +177,22 @@
   <section class="section-padding bg-subtle" id="doctors-list">
     <div class="container">
       <div class="text-center mb-5 reveal">
-        <span class="eyebrow eyebrow-navy">SPECIALIST PROFILES</span>
-        <h2>Our Senior Doctors & Clinicians</h2>
+        <span class="eyebrow">SPECIALIST PROFILES</span>
+        <h2 class="section-title">Our Senior Doctors & Clinicians</h2>
         <div class="gold-divider center"></div>
         <p class="text-muted mx-auto" style="max-width: 650px;">
-          Learn about our team's credentials, clinical specializations, and patient-first approach to oral healthcare.
+          Learn about our specialists' credentials, clinical expertise, and patient-first approach to oral health.
         </p>
       </div>
 
       <div class="row g-4">
-        <!-- Doctor 1: Chief Implantologist & Surgeon -->
+        <!-- Doctor 1: Chief Dental Surgeon & Implantologist -->
         <div class="col-lg-6 reveal">
           <div class="doctor-profile-card">
             <div class="row g-0 h-100">
               <div class="col-md-5">
                 <div class="doctor-card-img-wrap">
-                  <img src="assets/images/home1.png" alt="Senior Dental Specialist" class="doctor-card-img">
+                  <img src="assets/images/home1.png" alt="Dr. S. K. Krishna - Chief Dental Surgeon & Implantologist" class="doctor-card-img doctor-img-contain">
                   <span class="doctor-exp-badge"><i class="bi bi-star-fill text-gold me-1"></i> 15+ Yrs Exp</span>
                 </div>
               </div>
@@ -189,12 +202,12 @@
                   <h3 class="doctor-name">Dr. S. K. Krishna</h3>
                   <p class="doctor-qualification">BDS, MDS - Prosthodontics & Oral Implantology</p>
                   <p class="doctor-bio text-muted small">
-                    Specializes in full-mouth dental implants, digital smile designing, and complex restorative rehabilitation. Known for meticulous diagnostic planning and compassionate patient care.
+                    Specializes in full-mouth dental implants, digital smile designing, and complex restorative rehabilitation. Renowned for meticulous diagnosis and gentle surgical execution.
                   </p>
                   <div class="doctor-specialties mb-3">
-                    <span class="badge bg-light text-navy border me-1 mb-1">Dental Implants</span>
-                    <span class="badge bg-light text-navy border me-1 mb-1">Full Mouth Rehab</span>
-                    <span class="badge bg-light text-navy border mb-1">Crowns & Bridges</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Dental Implants</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Full Mouth Rehab</span>
+                    <span class="badge bg-white text-navy border mb-1">Crowns & Bridges</span>
                   </div>
                 </div>
                 <div class="doctor-card-actions pt-2 border-top">
@@ -207,13 +220,13 @@
           </div>
         </div>
 
-        <!-- Doctor 2: Senior Orthodontist -->
+        <!-- Doctor 2: Senior Orthodontist & Aligner Specialist -->
         <div class="col-lg-6 reveal">
           <div class="doctor-profile-card">
             <div class="row g-0 h-100">
               <div class="col-md-5">
                 <div class="doctor-card-img-wrap">
-                  <img src="assets/images/service-orthodontics.jpg" alt="Orthodontist Specialist" class="doctor-card-img">
+                  <img src="assets/images/doctor-consultation.jpg" alt="Dr. Radhika Sharma - Senior Orthodontist" class="doctor-card-img">
                   <span class="doctor-exp-badge"><i class="bi bi-star-fill text-gold me-1"></i> 12+ Yrs Exp</span>
                 </div>
               </div>
@@ -223,12 +236,12 @@
                   <h3 class="doctor-name">Dr. Radhika Sharma</h3>
                   <p class="doctor-qualification">BDS, MDS - Orthodontics & Dentofacial Orthopedics</p>
                   <p class="doctor-bio text-muted small">
-                    Certified Clear Aligner provider with deep expertise in invisible orthodontic aligners, ceramic braces, and interceptive orthodontics for teens and adults.
+                    Certified Clear Aligner specialist with extensive experience in customized invisible aligners, ceramic braces, and pediatric interceptive orthodontics.
                   </p>
                   <div class="doctor-specialties mb-3">
-                    <span class="badge bg-light text-navy border me-1 mb-1">Clear Aligners</span>
-                    <span class="badge bg-light text-navy border me-1 mb-1">Invisible Braces</span>
-                    <span class="badge bg-light text-navy border mb-1">Bite Correction</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Clear Aligners</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Invisible Braces</span>
+                    <span class="badge bg-white text-navy border mb-1">Bite Correction</span>
                   </div>
                 </div>
                 <div class="doctor-card-actions pt-2 border-top">
@@ -241,13 +254,13 @@
           </div>
         </div>
 
-        <!-- Doctor 3: Endodontist (Root Canal Specialist) -->
+        <!-- Doctor 3: Endodontist & Conservative Dentist -->
         <div class="col-lg-6 reveal">
           <div class="doctor-profile-card">
             <div class="row g-0 h-100">
               <div class="col-md-5">
                 <div class="doctor-card-img-wrap">
-                  <img src="assets/images/service-root-canal.jpg" alt="Endodontic Specialist" class="doctor-card-img">
+                  <img src="assets/images/hero-doctor-patient.jpg" alt="Dr. Rajesh Varma - Endodontist" class="doctor-card-img">
                   <span class="doctor-exp-badge"><i class="bi bi-star-fill text-gold me-1"></i> 10+ Yrs Exp</span>
                 </div>
               </div>
@@ -257,12 +270,12 @@
                   <h3 class="doctor-name">Dr. Rajesh Varma</h3>
                   <p class="doctor-qualification">BDS, MDS - Conservative Dentistry & Endodontics</p>
                   <p class="doctor-bio text-muted small">
-                    Expert in microscope-assisted single-sitting root canal treatments, rotary endodontics, and restorative tooth preservation with painless precision.
+                    Specializes in microscope-assisted single-sitting root canals, painless rotary endodontics, and conservative tooth-preserving restorations.
                   </p>
                   <div class="doctor-specialties mb-3">
-                    <span class="badge bg-light text-navy border me-1 mb-1">Single-Visit RCT</span>
-                    <span class="badge bg-light text-navy border me-1 mb-1">Laser Endodontics</span>
-                    <span class="badge bg-light text-navy border mb-1">Tooth Preservation</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Single-Visit RCT</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Laser Endodontics</span>
+                    <span class="badge bg-white text-navy border mb-1">Tooth Preservation</span>
                   </div>
                 </div>
                 <div class="doctor-card-actions pt-2 border-top">
@@ -275,13 +288,13 @@
           </div>
         </div>
 
-        <!-- Doctor 4: Pediatric Dentist -->
+        <!-- Doctor 4: Pediatric Dental Specialist -->
         <div class="col-lg-6 reveal">
           <div class="doctor-profile-card">
             <div class="row g-0 h-100">
               <div class="col-md-5">
                 <div class="doctor-card-img-wrap">
-                  <img src="assets/images/service-pediatric.jpg" alt="Pediatric Dental Specialist" class="doctor-card-img">
+                  <img src="assets/images/about-clinic.jpg" alt="Dr. Ananya Reddy - Pediatric Dentist" class="doctor-card-img">
                   <span class="doctor-exp-badge"><i class="bi bi-star-fill text-gold me-1"></i> 8+ Yrs Exp</span>
                 </div>
               </div>
@@ -291,12 +304,12 @@
                   <h3 class="doctor-name">Dr. Ananya Reddy</h3>
                   <p class="doctor-qualification">BDS, MDS - Pedodontics & Preventive Dentistry</p>
                   <p class="doctor-bio text-muted small">
-                    Dedicated to making dental visits joyful and stress-free for children. Specializes in preventive sealants, cavity care, and early dental habit management.
+                    Dedicated to making dental checkups joyful and fear-free for toddlers, children, and teens. Specializes in preventive sealants, cavity care, and fluoride applications.
                   </p>
                   <div class="doctor-specialties mb-3">
-                    <span class="badge bg-light text-navy border me-1 mb-1">Child Dental Care</span>
-                    <span class="badge bg-light text-navy border me-1 mb-1">Fluoride Therapy</span>
-                    <span class="badge bg-light text-navy border mb-1">Pit & Fissure Sealants</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Child Dental Care</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Fluoride Therapy</span>
+                    <span class="badge bg-white text-navy border mb-1">Pit & Fissure Sealants</span>
                   </div>
                 </div>
                 <div class="doctor-card-actions pt-2 border-top">
@@ -309,13 +322,13 @@
           </div>
         </div>
 
-        <!-- Doctor 5: Periodontist & Laser Dentistry -->
+        <!-- Doctor 5: Periodontist & Laser Specialist -->
         <div class="col-lg-6 reveal">
           <div class="doctor-profile-card">
             <div class="row g-0 h-100">
               <div class="col-md-5">
                 <div class="doctor-card-img-wrap">
-                  <img src="assets/images/service-laser.jpg" alt="Laser Dentistry Specialist" class="doctor-card-img">
+                  <img src="assets/images/service-laser.jpg" alt="Dr. Venkat Rao - Periodontist & Laser Specialist" class="doctor-card-img">
                   <span class="doctor-exp-badge"><i class="bi bi-star-fill text-gold me-1"></i> 11+ Yrs Exp</span>
                 </div>
               </div>
@@ -325,12 +338,12 @@
                   <h3 class="doctor-name">Dr. Venkat Rao</h3>
                   <p class="doctor-qualification">BDS, MDS - Periodontology & Oral Implantology</p>
                   <p class="doctor-bio text-muted small">
-                    Specializes in advanced dental laser therapy, gum depigmentation, periodontal regenerative surgeries, and soft tissue cosmetic contouring.
+                    Focuses on advanced laser gum therapy, painless periodontal rejuvenation, soft-tissue cosmetic contouring, and regenerative bone grafting.
                   </p>
                   <div class="doctor-specialties mb-3">
-                    <span class="badge bg-light text-navy border me-1 mb-1">Laser Gum Therapy</span>
-                    <span class="badge bg-light text-navy border me-1 mb-1">Periodontal Surgery</span>
-                    <span class="badge bg-light text-navy border mb-1">Gum Reshaping</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Laser Gum Therapy</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Periodontal Care</span>
+                    <span class="badge bg-white text-navy border mb-1">Gum Depigmentation</span>
                   </div>
                 </div>
                 <div class="doctor-card-actions pt-2 border-top">
@@ -343,13 +356,13 @@
           </div>
         </div>
 
-        <!-- Doctor 6: Cosmetic & Smile Designer -->
+        <!-- Doctor 6: Aesthetic & Cosmetic Dentist -->
         <div class="col-lg-6 reveal">
           <div class="doctor-profile-card">
             <div class="row g-0 h-100">
               <div class="col-md-5">
                 <div class="doctor-card-img-wrap">
-                  <img src="assets/images/service-cosmetic.jpg" alt="Cosmetic Dentist & Smile Designer" class="doctor-card-img">
+                  <img src="assets/images/philosophy-bg.jpg" alt="Dr. Priya Sharma - Cosmetic Dentist" class="doctor-card-img">
                   <span class="doctor-exp-badge"><i class="bi bi-star-fill text-gold me-1"></i> 9+ Yrs Exp</span>
                 </div>
               </div>
@@ -359,12 +372,12 @@
                   <h3 class="doctor-name">Dr. Priya Sharma</h3>
                   <p class="doctor-qualification">BDS, Fellowship in Aesthetic Dentistry</p>
                   <p class="doctor-bio text-muted small">
-                    Master of digital smile makeovers, porcelain dental veneers, composite bonding, and in-office professional laser teeth whitening.
+                    Master of modern smile makeovers, porcelain laminates, composite aesthetic bonding, and advanced laser teeth whitening solutions.
                   </p>
                   <div class="doctor-specialties mb-3">
-                    <span class="badge bg-light text-navy border me-1 mb-1">Smile Makeovers</span>
-                    <span class="badge bg-light text-navy border me-1 mb-1">Porcelain Veneers</span>
-                    <span class="badge bg-light text-navy border mb-1">Teeth Whitening</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Smile Makeovers</span>
+                    <span class="badge bg-white text-navy border me-1 mb-1">Porcelain Veneers</span>
+                    <span class="badge bg-white text-navy border mb-1">Teeth Whitening</span>
                   </div>
                 </div>
                 <div class="doctor-card-actions pt-2 border-top">
@@ -384,8 +397,8 @@
   <section class="section-padding bg-white" id="doctor-standards">
     <div class="container">
       <div class="text-center mb-5 reveal">
-        <span class="eyebrow eyebrow-navy">OUR PROMISE</span>
-        <h2>Why Our Patients Trust Our Doctors</h2>
+        <span class="eyebrow">OUR CLINICAL ETHOS</span>
+        <h2 class="section-title">Why Patients Trust Our Doctors</h2>
         <div class="gold-divider center"></div>
       </div>
 
@@ -429,140 +442,140 @@
     </div>
   </section>
 
-  <!-- CTA Consultation Banner -->
-  <section class="section-padding py-0">
+  <!-- CTA Section -->
+  <section class="section-padding bg-light">
     <div class="container">
-      <div class="cta-banner reveal">
-        <div class="row align-items-center gy-4">
-          <div class="col-lg-8">
-            <span class="badge bg-gold text-dark px-3 py-1 mb-3 fw-bold">SCHEDULE WITH A SPECIALIST</span>
-            <h2 class="text-white display-6 fw-bold mb-2">Ready for a Specialist Smile Consultation?</h2>
-            <p class="text-white-50 mb-0 fs-6">
-              Book an appointment with our senior doctors today. Fast confirmations, structured clinical assessments, and ethical dental care.
-            </p>
-          </div>
-          <div class="col-lg-4 text-lg-end">
-            <a href="appointment.html" class="btn btn-gold btn-lg me-2 mb-2 mb-sm-0">
-              <i class="bi bi-calendar-check me-2"></i> Book Appointment
-            </a>
-            <a href="tel:+919849000000" class="btn btn-outline-gold btn-lg">
-              <i class="bi bi-telephone me-2"></i> Call Clinic
-            </a>
-          </div>
+      <div class="cta-banner text-center reveal">
+        <span class="eyebrow">CONSULT OUR SPECIALISTS</span>
+        <h2 class="text-white mb-3">Experience Dedicated Specialist Dental Care</h2>
+        <p class="text-ivory mx-auto mb-4" style="max-width: 600px;">
+          Book a consultation with our senior dental surgeons to discuss your smile makeover, implants, braces, or family check-ups.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="appointment.html" class="btn btn-gold">
+            <i class="bi bi-calendar-check"></i> Book an Appointment
+          </a>
+          <a href="services.html" class="btn btn-outline-gold">
+            <i class="bi bi-grid"></i> View All Services
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer-section">
+  <!-- Master Footer -->
+  <footer class="footer-custom">
     <div class="container">
-      <div class="row gy-5">
-        <div class="col-lg-4 col-md-6">
-          <div class="footer-brand mb-3">
-            <span class="brand-title text-white">SHRI KRISHNA</span>
-            <span class="brand-sub text-champagne d-block">DENTAL HOSPITAL</span>
-          </div>
-          <p class="text-muted small mb-3">
-            A comprehensive, patient-centric dental healthcare facility providing advanced restorative, cosmetic, surgical, and preventive oral health solutions.
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/logo/logo.png" alt="Shri Krishna Dental Hospital" class="footer-logo-img">
+          </a>
+          <p class="footer-rebrand-text">
+            Previously Known As <strong>Jo'Dent Dental Clinic</strong>
           </p>
-          <div class="legacy-badge-footer p-2 rounded bg-navy-light border border-secondary mb-3">
-            <span class="badge bg-gold text-dark me-2">Notice</span>
-            <span class="small text-white-50">Formerly operating as <strong>Jo'Dent Dental Clinic</strong></span>
+          <p class="small text-ivory mb-4">
+            Shri Krishna Dental Hospital is committed to providing ethical, advanced, and patient-centered dental healthcare in a calm and modern environment.
+          </p>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-navy border-gold-subtle text-champagne p-2">
+              <i class="bi bi-shield-check me-1"></i> EHS / Aarogyasree Empanelled
+            </span>
           </div>
-          <div class="d-flex gap-2">
-            <span class="badge bg-success bg-opacity-25 text-success border border-success px-2 py-1 small">
-              <i class="bi bi-shield-check me-1"></i> EHS Empanelled
-            </span>
-            <span class="badge bg-gold bg-opacity-25 text-champagne border border-warning px-2 py-1 small">
-              <i class="bi bi-check-circle me-1"></i> Aarogyasree Trust
-            </span>
+          <div class="footer-social-links">
+            <a href="https://wa.me/919515425522" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://maps.google.com/?q=Shri+Krishna+Dental+Hospital+Allwyn+X+Roads+Miyapur+Hyderabad" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps"><i class="bi bi-geo-alt-fill"></i></a>
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-6">
+        <div class="col-6 col-lg-2">
           <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links list-unstyled">
+          <ul class="footer-links">
             <li><a href="index.html"><i class="bi bi-chevron-right small text-champagne"></i> Home</a></li>
             <li><a href="about.html"><i class="bi bi-chevron-right small text-champagne"></i> About Us</a></li>
             <li><a href="doctors.html"><i class="bi bi-chevron-right small text-champagne"></i> Our Doctors</a></li>
-            <li><a href="services.html"><i class="bi bi-chevron-right small text-champagne"></i> Dental Services</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right small text-champagne"></i> Services</a></li>
             <li><a href="why-choose-us.html"><i class="bi bi-chevron-right small text-champagne"></i> Why Choose Us</a></li>
-            <li><a href="blog.html"><i class="bi bi-chevron-right small text-champagne"></i> Dental Blog</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right small text-champagne"></i> Contact Us</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right small text-champagne"></i> Blog</a></li>
+            <li><a href="appointment.html"><i class="bi bi-chevron-right small text-champagne"></i> Appointment</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right small text-champagne"></i> Contact</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-6">
+        <div class="col-6 col-lg-3">
           <h4 class="footer-heading">Our Services</h4>
-          <ul class="footer-links list-unstyled">
+          <ul class="footer-links">
             <li><a href="dental-implants.html"><i class="bi bi-chevron-right small text-champagne"></i> Dental Implants</a></li>
             <li><a href="aligners.html"><i class="bi bi-chevron-right small text-champagne"></i> Clear Aligners</a></li>
-            <li><a href="orthodontic-treatment.html"><i class="bi bi-chevron-right small text-champagne"></i> Orthodontic Braces</a></li>
+            <li><a href="orthodontic-treatment.html"><i class="bi bi-chevron-right small text-champagne"></i> Orthodontic Care</a></li>
             <li><a href="laser-dentistry.html"><i class="bi bi-chevron-right small text-champagne"></i> Laser Dentistry</a></li>
-            <li><a href="root-canal-treatment.html"><i class="bi bi-chevron-right small text-champagne"></i> Root Canal Therapy</a></li>
-            <li><a href="pediatric-dentistry.html"><i class="bi bi-chevron-right small text-champagne"></i> Pediatric Care</a></li>
-            <li><a href="cosmetic-dentistry.html"><i class="bi bi-chevron-right small text-champagne"></i> Cosmetic Makeovers</a></li>
+            <li><a href="root-canal-treatment.html"><i class="bi bi-chevron-right small text-champagne"></i> Root Canal (RCT)</a></li>
+            <li><a href="pediatric-dentistry.html"><i class="bi bi-chevron-right small text-champagne"></i> Pediatric Dentistry</a></li>
+            <li><a href="cosmetic-dentistry.html"><i class="bi bi-chevron-right small text-champagne"></i> Cosmetic Dentistry</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-3 col-md-6">
-          <h4 class="footer-heading">Clinic Contact</h4>
-          <ul class="footer-contact list-unstyled small text-muted">
-            <li class="mb-3 d-flex align-items-start gap-2">
-              <i class="bi bi-geo-alt text-champagne fs-5 flex-shrink-0"></i>
-              <span>Shri Krishna Dental Hospital, Main Road, Hyderabad, Telangana - 500068</span>
-            </li>
-            <li class="mb-3 d-flex align-items-center gap-2">
-              <i class="bi bi-telephone text-champagne fs-5 flex-shrink-0"></i>
-              <span>+91 98490 00000</span>
-            </li>
-            <li class="mb-3 d-flex align-items-center gap-2">
-              <i class="bi bi-envelope text-champagne fs-5 flex-shrink-0"></i>
-              <span>care@shrikrishnadental.com</span>
-            </li>
-            <li class="d-flex align-items-center gap-2">
-              <i class="bi bi-clock text-champagne fs-5 flex-shrink-0"></i>
-              <span>Mon - Sat: 9:00 AM - 8:30 PM<br>Sunday: 9:30 AM - 1:30 PM</span>
-            </li>
-          </ul>
+        <div class="col-lg-3">
+          <h4 class="footer-heading">Hospital Contact</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <div>Ground Floor, Allwyn X Roads, near Bank of India, Widia Colony, Hafeezpet, Miyapur, Hyderabad, Telangana 500049</div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <div><a href="tel:+919515425522">+91 95154 25522</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope"></i>
+            <div><a href="mailto:[HospitalEmailAddress]">[Hospital Email Address]</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock"></i>
+            <div>Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: By Prior Appointment</div>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom mt-5 pt-4 border-top border-secondary text-center text-muted small">
-        <p class="mb-0">&copy; 2026 Shri Krishna Dental Hospital (Formerly Jo'Dent Dental Clinic). All rights reserved. | Empanelled under EHS Aarogyasree.</p>
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div>
+          &copy; 2026 Shri Krishna Dental Hospital. All Rights Reserved. | Designed by <a href="https://thepatternscompany.com/" target="_blank" rel="noopener noreferrer" class="text-champagne fw-semibold">The Patterns Company</a>
+        </div>
+        <div class="d-flex gap-4">
+          <a href="privacy-policy.html" class="text-ivory small">Privacy Policy</a>
+          <a href="terms-and-conditions.html" class="text-ivory small">Terms & Conditions</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Mobile Quick Action Bar -->
-  <div class="floating-action-bar d-lg-none">
-    <div class="container d-flex justify-content-around align-items-center">
-      <a href="tel:+919849000000" class="btn btn-navy-sm flex-fill me-2 text-center">
-        <i class="bi bi-telephone-fill me-1"></i> Call Now
-      </a>
-      <a href="https://wa.me/919849000000" class="btn btn-whatsapp-sm flex-fill me-2 text-center" target="_blank" rel="noopener">
-        <i class="bi bi-whatsapp me-1"></i> WhatsApp
-      </a>
-      <a href="appointment.html" class="btn btn-gold-sm flex-fill text-center">
-        <i class="bi bi-calendar-plus me-1"></i> Book
-      </a>
-    </div>
+  <!-- Floating Mobile Action Bar -->
+  <div class="floating-action-bar">
+    <a href="tel:+919515425522" class="btn btn-outline-gold btn-sm flex-fill">
+      <i class="bi bi-telephone-fill"></i> Call
+    </a>
+    <a href="appointment.html" class="btn btn-gold btn-sm flex-fill">
+      <i class="bi bi-calendar-check-fill"></i> Book
+    </a>
+    <a href="contact.html" class="btn btn-outline-gold btn-sm flex-fill">
+      <i class="bi bi-geo-alt-fill"></i> Location
+    </a>
   </div>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919849000000" class="whatsapp-float d-none d-lg-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919515425522?text=Hello%20Shri%20Krishna%20Dental%20Hospital,%20I%20would%20like%20to%20inquire%20about%20a%20dental%20consultation." class="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
-  <!-- Back to Top Button -->
-  <button type="button" class="back-to-top d-flex align-items-center justify-content-center" id="backToTopBtn" aria-label="Scroll to top">
-    <i class="bi bi-arrow-up"></i>
+  <!-- Back to top button -->
+  <button id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
   </button>
 
-  <!-- Bootstrap 5 JS Bundle -->
+  <!-- Bootstrap 5 Bundle JS & Custom Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
   <script src="js/script.js"></script>
 </body>
 </html>
