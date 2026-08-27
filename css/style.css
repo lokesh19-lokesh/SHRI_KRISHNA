@@ -740,14 +740,31 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   7. TRUST & INTRODUCTION SECTION
+   7. TRUST & INTRODUCTION SECTION (PATIENT-FIRST PHILOSOPHY)
    -------------------------------------------------------------------------- */
+.philosophy-section {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(246, 250, 255, 0.86) 50%, rgba(235, 243, 255, 0.90) 100%),
+              url('../assets/images/philosophy-bg.jpg') center center/cover no-repeat;
+  overflow: hidden;
+  border-top: 1px solid rgba(199, 169, 123, 0.25);
+  border-bottom: 1px solid rgba(199, 169, 123, 0.25);
+}
+
+@media (min-width: 992px) {
+  .philosophy-section {
+    background-attachment: fixed;
+  }
+}
+
 .trust-card {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-radius: 16px;
   padding: 2.2rem 1.8rem;
-  border: 1px solid var(--border-color-light);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(199, 169, 123, 0.3);
+  box-shadow: 0 10px 30px rgba(3, 25, 88, 0.08);
   transition: var(--transition-smooth);
   height: 100%;
   position: relative;
@@ -767,8 +784,9 @@ img {
 }
 
 .trust-card:hover {
+  background: #ffffff;
   transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 16px 38px rgba(3, 25, 88, 0.14);
   border-color: var(--champagne-gold);
 }
 
