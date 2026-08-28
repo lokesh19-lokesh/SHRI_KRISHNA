@@ -295,44 +295,51 @@ img {
 }
 
 .brand-logo-img {
-  height: 70px;
+  height: 110px;
   width: auto;
-  max-width: 320px;
+  max-width: 420px;
   object-fit: contain;
   display: block;
   transition: var(--transition-smooth);
 }
 
+.navbar-custom.is-sticky .brand-logo-img {
+  height: 86px;
+}
+
 .brand-logo-wrap:hover .brand-logo-img {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .footer-logo-img {
-  height: 72px;
+  height: 115px;
   width: auto;
-  max-width: 340px;
+  max-width: 420px;
   object-fit: contain;
   display: block;
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .brand-logo-img {
-    height: 56px;
-    max-width: 250px;
+    height: 88px;
+    max-width: 340px;
   }
 }
 
 @media (max-width: 991.98px) {
   .brand-logo-img {
-    height: 56px;
-    max-width: 250px;
+    height: 80px;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 767.98px) {
   .brand-logo-img {
-    height: 52px;
-    max-width: 230px;
+    height: 70px;
+    max-width: 270px;
+  }
+  .footer-logo-img {
+    height: 90px;
   }
 }
 
@@ -2164,8 +2171,8 @@ img {
   }
 
   .brand-logo-img {
-    height: 46px !important;
-    max-width: 210px !important;
+    height: 64px !important;
+    max-width: 250px !important;
   }
 
   .navbar-toggler {
@@ -2311,8 +2318,8 @@ img {
   }
 
   .brand-logo-img {
-    height: 42px;
-    max-width: 190px;
+    height: 58px;
+    max-width: 230px;
   }
 
   .navbar-nav .nav-link {
