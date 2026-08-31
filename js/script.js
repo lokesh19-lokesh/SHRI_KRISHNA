@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initTestimonialsSlider();
   initCountUpStats();
+  initTestimonialFilters();
 });
 
 /* --------------------------------------------------------------------------
@@ -420,3 +421,61 @@ function initCountUpStats() {
     statElements.forEach((el) => animateCount(el));
   }
 }
+
+/* --------------------------------------------------------------------------
+   10. TESTIMONIALS CATEGORY FILTERING & EXPANSION
+   -------------------------------------------------------------------------- */
+function initTestimonialFilters() {
+  const filterBtns = document.querySelectorAll('.filter-tab-btn');
+  const cards = document.querySelectorAll('.testimonial-filter-item');
+
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      cards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        if (filterValue === 'all' || category === filterValue || (category && category.includes(filterValue))) {
+          card.style.display = 'block';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 50);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 250);
+        }
+      });
+    });
+  });
+
+  // Testimonial readmore toggle if present
+  document.querySelectorAll('.testimonial-readmore-toggle').forEach((toggleBtn) => {
+    toggleBtn.addEventListener('click', () => {
+      const parent = toggleBtn.closest('.testimonial-grid-card') || toggleBtn.closest('.testimonial-card');
+      if (!parent) return;
+      const textEl = parent.querySelector('.testimonial-text-full');
+      const shortEl = parent.querySelector('.testimonial-text-short');
+      if (textEl && shortEl) {
+        if (textEl.style.display === 'none' || !textEl.style.display) {
+          textEl.style.display = 'block';
+          shortEl.style.display = 'none';
+          toggleBtn.textContent = 'Show less';
+        } else {
+          textEl.style.display = 'none';
+          shortEl.style.display = 'block';
+          toggleBtn.textContent = 'Read more';
+        }
+      }
+    });
+  });
+}
+
