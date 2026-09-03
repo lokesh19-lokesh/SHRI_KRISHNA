@@ -3,7 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /vendor/
 
 # Explicit Permissions for AI Search & Answer Engine Crawlers (AEO / GEO)
 User-agent: GPTBot
