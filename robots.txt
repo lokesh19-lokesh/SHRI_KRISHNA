@@ -39,5 +39,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# XML Sitemap Declaration
+# XML Sitemap & AI LLM Feed Declarations
 Sitemap: https://shrikrishnadental.com/sitemap.xml
+# LLMs Feed: https://shrikrishnadental.com/llms.txt
+# LLMs Full Feed: https://shrikrishnadental.com/llms-full.txt

@@ -268,158 +268,52 @@ function initTestimonialsSlider() {
   const nextBtn = document.getElementById('testimonialNext');
   if (!wrapper || !track) return;
 
-  // Clone all cards for a mathematically seamless infinite loop
-  const originalCards = Array.from(track.children);
-  if (!originalCards.length) return;
+  const cards = Array.from(track.children);
+  if (!cards.length) return;
 
-  originalCards.forEach((card) => {
-    const clone = card.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
-  });
-
-  let singleSetWidth = 0;
-  function calculateWidth() {
-    singleSetWidth = 0;
+  let currentIndex = 0;
+  const getCardStep = () => {
+    const cardWidth = cards[0]?.offsetWidth || 340;
     const gap = parseFloat(window.getComputedStyle(track).gap) || 24;
-    originalCards.forEach((card) => {
-      singleSetWidth += card.offsetWidth + gap;
-    });
-  }
+    return cardWidth + gap;
+  };
 
-  calculateWidth();
-  window.addEventListener('resize', calculateWidth);
+  const updateSlide = () => {
+    const step = getCardStep();
+    const maxIndex = Math.max(0, cards.length - Math.floor(wrapper.offsetWidth / step));
+    if (currentIndex > maxIndex) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = maxIndex;
+    track.style.transition = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
+    track.style.transform = `translateX(-${currentIndex * step}px)`;
+  };
 
-  let position = 0;
-  const speed = 0.75; // Smooth sub-pixel progression at 60fps
-  let isPaused = false;
-  let isDragging = false;
-  let startX = 0;
-  let dragStartPos = 0;
-  let isTransitioning = false;
-
-  function step() {
-    if (!isPaused && !isDragging && !isTransitioning) {
-      position -= speed;
-      if (Math.abs(position) >= singleSetWidth) {
-        position += singleSetWidth;
-      }
-      track.style.transform = `translateX(${position}px)`;
-    }
-    requestAnimationFrame(step);
-  }
-
-  requestAnimationFrame(step);
-
-  // Hover Pause
-  wrapper.addEventListener('mouseenter', () => { isPaused = true; });
-  wrapper.addEventListener('mouseleave', () => {
-    if (!isDragging) isPaused = false;
-  });
-
-  // Next Button Step
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      if (isTransitioning) return;
-      isTransitioning = true;
-      const cardWidth = (originalCards[0]?.offsetWidth || 320) + (parseFloat(window.getComputedStyle(track).gap) || 24);
-      position -= cardWidth;
-      
-      track.style.transition = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
-      track.style.transform = `translateX(${position}px)`;
-
-      setTimeout(() => {
-        if (Math.abs(position) >= singleSetWidth) {
-          position += singleSetWidth;
-        }
-        track.style.transition = 'none';
-        track.style.transform = `translateX(${position}px)`;
-        isTransitioning = false;
-      }, 450);
+      currentIndex++;
+      updateSlide();
     });
   }
 
-  // Prev Button Step
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-      if (isTransitioning) return;
-      isTransitioning = true;
-      const cardWidth = (originalCards[0]?.offsetWidth || 320) + (parseFloat(window.getComputedStyle(track).gap) || 24);
-      position += cardWidth;
-
-      track.style.transition = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
-      track.style.transform = `translateX(${position}px)`;
-
-      setTimeout(() => {
-        if (position > 0) {
-          position -= singleSetWidth;
-        }
-        track.style.transition = 'none';
-        track.style.transform = `translateX(${position}px)`;
-        isTransitioning = false;
-      }, 450);
+      currentIndex--;
+      updateSlide();
     });
   }
 
-  // Mouse Drag Events
-  wrapper.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    isPaused = true;
-    startX = e.pageX;
-    dragStartPos = position;
-    track.style.transition = 'none';
-  });
+  // Automatic gentle progression without DOM manipulation
+  let autoSlideTimer = setInterval(() => {
+    currentIndex++;
+    updateSlide();
+  }, 4500);
 
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const delta = e.pageX - startX;
-    position = dragStartPos + delta;
-
-    if (Math.abs(position) >= singleSetWidth) {
-      position += singleSetWidth;
-      dragStartPos += singleSetWidth;
-    } else if (position > 0) {
-      position -= singleSetWidth;
-      dragStartPos -= singleSetWidth;
-    }
-    track.style.transform = `translateX(${position}px)`;
-  });
-
-  window.addEventListener('mouseup', () => {
-    if (isDragging) {
-      isDragging = false;
-      isPaused = false;
-    }
-  });
-
-  // Touch Drag Events
-  wrapper.addEventListener('touchstart', (e) => {
-    if (!e.touches.length) return;
-    isDragging = true;
-    isPaused = true;
-    startX = e.touches[0].pageX;
-    dragStartPos = position;
-    track.style.transition = 'none';
-  }, { passive: true });
-
-  wrapper.addEventListener('touchmove', (e) => {
-    if (!isDragging || !e.touches.length) return;
-    const delta = e.touches[0].pageX - startX;
-    position = dragStartPos + delta;
-
-    if (Math.abs(position) >= singleSetWidth) {
-      position += singleSetWidth;
-      dragStartPos += singleSetWidth;
-    } else if (position > 0) {
-      position -= singleSetWidth;
-      dragStartPos -= singleSetWidth;
-    }
-    track.style.transform = `translateX(${position}px)`;
-  }, { passive: true });
-
-  wrapper.addEventListener('touchend', () => {
-    isDragging = false;
-    isPaused = false;
+  wrapper.addEventListener('mouseenter', () => clearInterval(autoSlideTimer));
+  wrapper.addEventListener('mouseleave', () => {
+    clearInterval(autoSlideTimer);
+    autoSlideTimer = setInterval(() => {
+      currentIndex++;
+      updateSlide();
+    }, 4500);
   });
 }
 
