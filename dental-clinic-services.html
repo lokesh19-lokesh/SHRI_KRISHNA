@@ -346,25 +346,28 @@
               Fill the form below to reserve your priority doctor consultation.
             </p>
 
-            <form id="lpAppointmentForm" novalidate>
+            <form id="lpAppointmentForm" action="send-mail.php" method="POST" novalidate>
+              <input type="hidden" name="form_type" value="Priority Dental Consultation">
+              <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
+              
               <div class="mb-3">
                 <label for="lpName" class="form-label small fw-semibold text-navy">Full Name *</label>
-                <input type="text" class="form-control form-control-sm" id="lpName" placeholder="Enter your full name"
+                <input type="text" class="form-control form-control-sm" id="lpName" name="lpName" placeholder="Enter your full name"
                   required>
                 <div class="invalid-feedback small">Please provide your name.</div>
               </div>
 
               <div class="mb-3">
                 <label for="lpPhone" class="form-label small fw-semibold text-navy">Phone Number *</label>
-                <input type="tel" class="form-control form-control-sm" id="lpPhone" placeholder="10-digit mobile number"
-                  required>
-                <div class="invalid-feedback small">Please provide a valid phone number.</div>
+                <input type="tel" class="form-control form-control-sm" id="lpPhone" name="lpPhone" placeholder="10-digit mobile number"
+                  pattern="[0-9]{10}" required>
+                <div class="invalid-feedback small">Please provide a valid 10-digit phone number.</div>
               </div>
 
               <div class="mb-3">
                 <label for="lpService" class="form-label small fw-semibold text-navy">Treatment / Service Needed
                   *</label>
-                <select class="form-select form-select-sm" id="lpService" required>
+                <select class="form-select form-select-sm" id="lpService" name="lpService" required>
                   <option value="" selected disabled>Select Treatment</option>
                   <option value="Dental Implants">Dental Implants (Tooth Replacement)</option>
                   <option value="Clear Aligners">Clear Aligners / Invisible Braces</option>
@@ -381,11 +384,11 @@
               <div class="row g-2 mb-3">
                 <div class="col-6">
                   <label for="lpDate" class="form-label small fw-semibold text-navy">Preferred Date</label>
-                  <input type="date" class="form-control form-control-sm" id="lpDate">
+                  <input type="date" class="form-control form-control-sm" id="lpDate" name="lpDate">
                 </div>
                 <div class="col-6">
                   <label for="lpTime" class="form-label small fw-semibold text-navy">Preferred Time</label>
-                  <select class="form-select form-select-sm" id="lpTime">
+                  <select class="form-select form-select-sm" id="lpTime" name="lpTime">
                     <option value="Morning">Morning (9 AM - 1 PM)</option>
                     <option value="Afternoon">Afternoon (1 PM - 5 PM)</option>
                     <option value="Evening">Evening (5 PM - 8 PM)</option>
@@ -394,7 +397,7 @@
               </div>
 
               <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="lpEhsCheck">
+                <input class="form-check-input" type="checkbox" id="lpEhsCheck" name="lpEhsCheck" value="yes">
                 <label class="form-check-label small text-muted" for="lpEhsCheck">
                   I am an EHS / Aarogyasree beneficiary cardholder
                 </label>

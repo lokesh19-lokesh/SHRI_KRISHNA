@@ -142,10 +142,10 @@ function initMobileMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   6. CLIENT-SIDE FORM VALIDATION & REDIRECTION TO THANK YOU PAGE
+   6. CLIENT-SIDE FORM VALIDATION & PHP BACKEND SUBMISSION
    -------------------------------------------------------------------------- */
 function initFormValidation() {
-  const forms = document.querySelectorAll('form, .needs-validation, #appointmentForm, #contactInquiryForm, #lpAppointmentForm');
+  const forms = document.querySelectorAll('form.needs-validation, #appointmentForm, #contactInquiryForm, #lpAppointmentForm');
 
   Array.from(forms).forEach((form) => {
     form.addEventListener(
@@ -163,15 +163,49 @@ function initFormValidation() {
 
         // Provide immediate visual loading state on submit button
         const submitBtn = form.querySelector('button[type="submit"]');
+        let originalBtnHtml = '';
         if (submitBtn) {
+          originalBtnHtml = submitBtn.innerHTML;
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Submitting...';
         }
 
-        // Redirect to thank you page
-        setTimeout(() => {
+        const formData = new FormData(form);
+        const actionUrl = form.getAttribute('action') || 'send-mail.php';
+
+        // Submit via AJAX Fetch to PHP mailer
+        fetch(actionUrl, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        })
+        .then((response) => response.json().catch(() => ({ status: 'success' })))
+        .then((data) => {
+          // If the form has an in-page feedback container and wants to stay on page
+          const inPageFeedback = form.querySelector('#lpFormFeedback');
+          if (inPageFeedback && form.id === 'lpAppointmentForm') {
+            inPageFeedback.classList.remove('d-none');
+            form.reset();
+            form.classList.remove('was-validated');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnHtml;
+            }
+            setTimeout(() => {
+              window.location.href = 'thank-you.html';
+            }, 800);
+          } else {
+            // Redirect to thank you page
+            window.location.href = data.redirect || 'thank-you.html';
+          }
+        })
+        .catch((err) => {
+          console.warn('Form mailer notification:', err);
+          // Gracefully fallback to redirecting
           window.location.href = 'thank-you.html';
-        }, 400);
+        });
       },
       false
     );

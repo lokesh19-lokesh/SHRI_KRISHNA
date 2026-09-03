@@ -225,12 +225,15 @@
               consultation schedule.
             </p>
 
-            <form class="needs-validation" novalidate id="appointmentForm">
+            <form class="needs-validation" novalidate id="appointmentForm" action="send-mail.php" method="POST">
+              <input type="hidden" name="form_type" value="Online Appointment Request">
+              <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
+              
               <div class="row g-3">
                 <!-- Full Name -->
                 <div class="col-md-12">
                   <label for="fullName" class="form-label-custom">Full Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control form-control-custom" id="fullName"
+                  <input type="text" class="form-control form-control-custom" id="fullName" name="fullName"
                     placeholder="e.g. Rahul Sharma" required>
                   <div class="invalid-feedback">Please enter your full name.</div>
                 </div>
@@ -238,7 +241,7 @@
                 <!-- Phone Number -->
                 <div class="col-md-6">
                   <label for="phone" class="form-label-custom">Phone Number <span class="text-danger">*</span></label>
-                  <input type="tel" class="form-control form-control-custom" id="phone" placeholder="e.g. 9876543210"
+                  <input type="tel" class="form-control form-control-custom" id="phone" name="phone" placeholder="e.g. 9876543210"
                     pattern="[0-9]{10}" required>
                   <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
                 </div>
@@ -246,7 +249,7 @@
                 <!-- Email -->
                 <div class="col-md-6">
                   <label for="email" class="form-label-custom">Email Address <span class="text-danger">*</span></label>
-                  <input type="email" class="form-control form-control-custom" id="email"
+                  <input type="email" class="form-control form-control-custom" id="email" name="email"
                     placeholder="e.g. name@example.com" required>
                   <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
@@ -255,7 +258,7 @@
                 <div class="col-md-6">
                   <label for="prefDate" class="form-label-custom">Preferred Date <span
                       class="text-danger">*</span></label>
-                  <input type="date" class="form-control form-control-custom" id="prefDate" required>
+                  <input type="date" class="form-control form-control-custom" id="prefDate" name="prefDate" required>
                   <div class="invalid-feedback">Please select a preferred date.</div>
                 </div>
 
@@ -263,7 +266,7 @@
                 <div class="col-md-6">
                   <label for="prefTime" class="form-label-custom">Preferred Time Slot <span
                       class="text-danger">*</span></label>
-                  <select class="form-select form-select-custom" id="prefTime" required>
+                  <select class="form-select form-select-custom" id="prefTime" name="prefTime" required>
                     <option value="" selected disabled>Select Time Slot</option>
                     <option value="Morning (10:00 AM - 12:00 PM)">Morning (10:00 AM - 12:00 PM)</option>
                     <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
@@ -276,7 +279,7 @@
                 <div class="col-md-12">
                   <label for="serviceSelect" class="form-label-custom">Select Service <span
                       class="text-danger">*</span></label>
-                  <select class="form-select form-select-custom" id="serviceSelect" required>
+                  <select class="form-select form-select-custom" id="serviceSelect" name="serviceSelect" required>
                     <option value="" selected disabled>Choose the primary treatment of interest</option>
                     <option value="Dental Implants">Dental Implants</option>
                     <option value="Aligners">Clear Aligners (Invisalign / Spark / In-house)</option>
@@ -294,7 +297,7 @@
                 <!-- Message / Details -->
                 <div class="col-md-12">
                   <label for="message" class="form-label-custom">Additional Information or Symptoms (Optional)</label>
-                  <textarea class="form-control form-control-custom" id="message" rows="3"
+                  <textarea class="form-control form-control-custom" id="message" name="message" rows="3"
                     placeholder="Briefly describe your symptoms or specific consultation requirements..."></textarea>
                 </div>
 

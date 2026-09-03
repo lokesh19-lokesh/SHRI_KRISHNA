@@ -303,7 +303,7 @@
                 </div>
                 <div>
                   <h3 class="h6 text-navy fw-bold mb-1">Email Address</h3>
-                  <p class="text-muted small mb-0"><a href="mailto:[HospitalEmailAddress]">[Hospital Email Address]</a>
+                  <p class="text-muted small mb-0"><a href="mailto:shrikrishnadental2@gmail.com">shrikrishnadental2@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -341,37 +341,40 @@
               get back to you.
             </p>
 
-            <form class="needs-validation" novalidate id="contactInquiryForm">
+            <form class="needs-validation" novalidate id="contactInquiryForm" action="send-mail.php" method="POST">
+              <input type="hidden" name="form_type" value="Contact Message / Inquiry">
+              <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
+              
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="contactName" class="form-label-custom">Name <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control form-control-custom" id="contactName"
+                  <input type="text" class="form-control form-control-custom" id="contactName" name="contactName"
                     placeholder="Your Full Name" required>
                   <div class="invalid-feedback">Please provide your name.</div>
                 </div>
 
                 <div class="col-md-6">
                   <label for="contactPhone" class="form-label-custom">Phone <span class="text-danger">*</span></label>
-                  <input type="tel" class="form-control form-control-custom" id="contactPhone"
+                  <input type="tel" class="form-control form-control-custom" id="contactPhone" name="contactPhone"
                     placeholder="10-digit Phone Number" pattern="[0-9]{10}" required>
                   <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div>
                 </div>
 
                 <div class="col-md-12">
                   <label for="contactEmail" class="form-label-custom">Email <span class="text-danger">*</span></label>
-                  <input type="email" class="form-control form-control-custom" id="contactEmail"
+                  <input type="email" class="form-control form-control-custom" id="contactEmail" name="contactEmail"
                     placeholder="name@example.com" required>
                   <div class="invalid-feedback">Please provide a valid email.</div>
                 </div>
 
                 <div class="col-md-6">
                   <label for="contactDate" class="form-label-custom">Preferred Date (Optional)</label>
-                  <input type="date" class="form-control form-control-custom" id="contactDate">
+                  <input type="date" class="form-control form-control-custom" id="contactDate" name="contactDate">
                 </div>
 
                 <div class="col-md-6">
                   <label for="contactTime" class="form-label-custom">Preferred Time (Optional)</label>
-                  <select class="form-select form-select-custom" id="contactTime">
+                  <select class="form-select form-select-custom" id="contactTime" name="contactTime">
                     <option value="" selected>Any Time</option>
                     <option value="Morning">Morning (10:00 AM - 12:00 PM)</option>
                     <option value="Afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
@@ -381,7 +384,7 @@
 
                 <div class="col-md-12">
                   <label for="contactService" class="form-label-custom">Service of Interest</label>
-                  <select class="form-select form-select-custom" id="contactService">
+                  <select class="form-select form-select-custom" id="contactService" name="contactService">
                     <option value="General Inquiry" selected>General Dental Inquiry</option>
                     <option value="Dental Implants">Dental Implants</option>
                     <option value="Aligners">Clear Aligners (Invisalign / Spark / In-house)</option>
@@ -396,7 +399,7 @@
 
                 <div class="col-md-12">
                   <label for="contactMsg" class="form-label-custom">Message <span class="text-danger">*</span></label>
-                  <textarea class="form-control form-control-custom" id="contactMsg" rows="4"
+                  <textarea class="form-control form-control-custom" id="contactMsg" name="contactMsg" rows="4"
                     placeholder="How can we assist you?" required></textarea>
                   <div class="invalid-feedback">Please enter your message.</div>
                 </div>
