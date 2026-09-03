@@ -68,106 +68,128 @@
 
   <!-- JSON-LD Structured Data Schema: MedicalWebPage + Dentist + FAQPage -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": "https://shrikrishnadental.com/dental-clinic-services.html#webpage",
-        "url": "https://shrikrishnadental.com/dental-clinic-services.html",
-        "name": "Comprehensive Dental Services & Treatments in Hyderabad",
-        "description": "Overview of dental treatments including dental implants, clear aligners, root canal therapy, laser dentistry, wisdom tooth removal, and pediatric care at Shri Krishna Dental Hospital.",
-        "about": {
-          "@type": "MedicalBusiness",
-          "name": "Shri Krishna Dental Hospital"
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://shrikrishnadental.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Services",
-              "item": "https://shrikrishnadental.com/dental-clinic-services.html"
-            }
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://shrikrishnadental.com/dental-clinic-services.html#webpage",
+      "url": "https://shrikrishnadental.com/dental-clinic-services.html",
+      "name": "Comprehensive Dental Services & Treatments in Hyderabad",
+      "description": "Overview of dental treatments including dental implants, clear aligners, root canal therapy, laser dentistry, wisdom tooth removal, and pediatric care at Shri Krishna Dental Hospital.",
+      "about": {
+        "@type": "MedicalBusiness",
+        "name": "Shri Krishna Dental Hospital"
       },
-      {
-        "@type": "Dentist",
-        "@id": "https://shrikrishnadental.com/#dentist",
-        "name": "Shri Krishna Dental Hospital",
-        "alternateName": "Jo'Dent Dental Clinic",
-        "image": "https://shrikrishnadental.com/assets/logo/logo.png",
-        "telephone": "+919515425522",
-        "url": "https://shrikrishnadental.com/",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Ground Floor, Allwyn X Roads, near Bank of India, Allwyn X Road, Widia Colony, Hafeezpet",
-          "addressLocality": "Miyapur, Hyderabad",
-          "addressRegion": "Telangana",
-          "postalCode": "500049",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 17.4933,
-          "longitude": 78.3411
-        },
-        "areaServed": ["Miyapur", "Chandanagar", "Hafeezpet", "Kondapur", "Allwyn X Road", "Madinaguda", "Hyderabad"],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "480"
-        },
-        "openingHoursSpecification": [
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "09:00",
-            "closes": "20:00"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://shrikrishnadental.com/dental-clinic-services.html#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Which dental clinic provides painless root canal treatment in Hafeezpet and Kondapur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Shri Krishna Dental Hospital at Allwyn X Roads specializes in single-sitting painless root canal treatments using computerized apex locators and rotary endodontics, serving patients from Hafeezpet, Kondapur, and Miyapur."
-            }
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://shrikrishnadental.com/"
           },
           {
-            "@type": "Question",
-            "name": "Where can I get expert dental implants in Miyapur and Chandanagar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Dr. S. K. Krishna at Shri Krishna Dental Hospital offers international titanium & zirconia dental implants (Nobel Biocare, Straumann) with 3D CBCT digital planning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are emergency wisdom tooth removal and tooth extraction available?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, our Oral & Maxillofacial surgeons provide atraumatic and painless tooth extractions and wisdom tooth surgical removals with minimal recovery downtime."
-            }
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://shrikrishnadental.com/dental-clinic-services.html"
           }
         ]
       }
-    ]
-  }
+    },
+    {
+      "@type": "Dentist",
+      "@id": "https://shrikrishnadental.com/#dentist",
+      "name": "Shri Krishna Dental Hospital",
+      "alternateName": "Jo'Dent Dental Clinic",
+      "image": "https://shrikrishnadental.com/assets/logo/logo.png",
+      "telephone": "+919515425522",
+      "url": "https://shrikrishnadental.com/",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ground Floor, Allwyn X Roads, near Bank of India, Allwyn X Road, Widia Colony, Hafeezpet",
+        "addressLocality": "Miyapur, Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500049",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 17.4933,
+        "longitude": 78.3411
+      },
+      "areaServed": [
+        "Miyapur",
+        "Chandanagar",
+        "Hafeezpet",
+        "Kondapur",
+        "Allwyn X Road",
+        "Madinaguda",
+        "Hyderabad"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "480"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61593630516104",
+        "https://www.instagram.com/shrikrishnadental2/",
+        "https://www.pinterest.com/shrikrishnadental/",
+        "https://x.com/Shrikrishnadent",
+        "https://www.linkedin.com/company/shri-krishna-dental-hospital/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://shrikrishnadental.com/dental-clinic-services.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which dental clinic provides painless root canal treatment in Hafeezpet and Kondapur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shri Krishna Dental Hospital at Allwyn X Roads specializes in single-sitting painless root canal treatments using computerized apex locators and rotary endodontics, serving patients from Hafeezpet, Kondapur, and Miyapur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I get expert dental implants in Miyapur and Chandanagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dr. S. K. Krishna at Shri Krishna Dental Hospital offers international titanium & zirconia dental implants (Nobel Biocare, Straumann) with 3D CBCT digital planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are emergency wisdom tooth removal and tooth extraction available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our Oral & Maxillofacial surgeons provide atraumatic and painless tooth extractions and wisdom tooth surgical removals with minimal recovery downtime."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -789,11 +811,13 @@
               <i class="bi bi-shield-check me-1"></i> EHS / Aarogyasree Empanelled
             </span>
           </div>
-          <div class="footer-social-links">
+                    <div class="footer-social-links">
+            <a href="https://www.facebook.com/profile.php?id=61593630516104" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/shrikrishnadental2/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.pinterest.com/shrikrishnadental/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://x.com/Shrikrishnadent" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.linkedin.com/company/shri-krishna-dental-hospital/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="https://wa.me/919515425522" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             <a href="https://maps.google.com/?q=Shri+Krishna+Dental+Hospital+Allwyn+X+Roads+Miyapur+Hyderabad" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps"><i class="bi bi-geo-alt-fill"></i></a>
           </div>
         </div>

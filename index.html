@@ -70,110 +70,148 @@
 
   <!-- JSON-LD Structured Data: Dentist + FAQPage (AEO & GEO Optimization) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Dentist",
-        "@id": "https://shrikrishnadental.com/#dentist",
-        "name": "Shri Krishna Dental Hospital",
-        "alternateName": "Jo'Dent Dental Clinic",
-        "url": "https://shrikrishnadental.com/",
-        "logo": "https://shrikrishnadental.com/assets/logo/logo.png",
-        "image": "https://shrikrishnadental.com/assets/images/hero-doctor-patient.jpg",
-        "description": "Multi-specialty dental hospital providing dental implants, clear aligners, laser dentistry, single-sitting root canals, wisdom tooth removal, and pediatric dental care in Miyapur, Chandanagar, Hafeezpet, and Kondapur, Hyderabad. Empanelled under EHS Aarogyasree.",
-        "telephone": "+919515425522",
-        "priceRange": "$$",
-        "currenciesAccepted": "INR",
-        "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Net Banking",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Ground Floor, Allwyn X Roads, near Bank of India, Allwyn X Road, Widia Colony, Hafeezpet",
-          "addressLocality": "Miyapur, Hyderabad",
-          "addressRegion": "Telangana",
-          "postalCode": "500049",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 17.4933,
-          "longitude": 78.3411
-        },
-        "hasMap": "https://maps.google.com/?q=17.4933,78.3411",
-        "areaServed": [
-          { "@type": "Place", "name": "Miyapur" },
-          { "@type": "Place", "name": "Chandanagar" },
-          { "@type": "Place", "name": "Hafeezpet" },
-          { "@type": "Place", "name": "Kondapur" },
-          { "@type": "Place", "name": "Allwyn X Road" },
-          { "@type": "Place", "name": "Madinaguda" },
-          { "@type": "Place", "name": "Kukatpally" },
-          { "@type": "Place", "name": "Hyderabad" }
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "09:00",
-            "closes": "20:00"
-          }
-        ],
-        "medicalSpecialty": [
-          "Dentistry",
-          "OralSurgeon",
-          "Orthodontics",
-          "PediatricDentistry",
-          "Periodontics",
-          "Prosthodontics"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "480",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dentist",
+      "@id": "https://shrikrishnadental.com/#dentist",
+      "name": "Shri Krishna Dental Hospital",
+      "alternateName": "Jo'Dent Dental Clinic",
+      "url": "https://shrikrishnadental.com/",
+      "logo": "https://shrikrishnadental.com/assets/logo/logo.png",
+      "image": "https://shrikrishnadental.com/assets/images/hero-doctor-patient.jpg",
+      "description": "Multi-specialty dental hospital providing dental implants, clear aligners, laser dentistry, single-sitting root canals, wisdom tooth removal, and pediatric dental care in Miyapur, Chandanagar, Hafeezpet, and Kondapur, Hyderabad. Empanelled under EHS Aarogyasree.",
+      "telephone": "+919515425522",
+      "priceRange": "$$",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Net Banking",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ground Floor, Allwyn X Roads, near Bank of India, Allwyn X Road, Widia Colony, Hafeezpet",
+        "addressLocality": "Miyapur, Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500049",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://shrikrishnadental.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Where is the best dental clinic located in Miyapur and Chandanagar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Shri Krishna Dental Hospital (formerly Jo'Dent) is located at Ground Floor, Allwyn X Roads, near Bank of India, Widia Colony, Hafeezpet, Miyapur, Hyderabad. It conveniently serves patients across Miyapur, Chandanagar, Hafeezpet, and Kondapur."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is Shri Krishna Dental Hospital empanelled under EHS / Aarogyasree?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, Shri Krishna Dental Hospital is empanelled under the Employees' Health Scheme (EHS) under Aarogyasree for eligible Telangana State Government employees, pensioners, and their dependents."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What dental treatments are available at Shri Krishna Dental Hospital?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We provide comprehensive treatments including single & full-mouth dental implants, clear aligners (Invisalign & Spark), single-sitting painless root canals, laser soft tissue dentistry, wisdom tooth removal, pediatric dentistry, and cosmetic smile designing."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can I book an appointment with a specialist dentist near Hafeezpet or Kondapur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can book an appointment online at https://shrikrishnadental.com/appointment.html or call directly at +91 95154 25522 for same-day or priority consultations."
-            }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 17.4933,
+        "longitude": 78.3411
+      },
+      "hasMap": "https://maps.google.com/?q=17.4933,78.3411",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Miyapur"
+        },
+        {
+          "@type": "Place",
+          "name": "Chandanagar"
+        },
+        {
+          "@type": "Place",
+          "name": "Hafeezpet"
+        },
+        {
+          "@type": "Place",
+          "name": "Kondapur"
+        },
+        {
+          "@type": "Place",
+          "name": "Allwyn X Road"
+        },
+        {
+          "@type": "Place",
+          "name": "Madinaguda"
+        },
+        {
+          "@type": "Place",
+          "name": "Kukatpally"
+        },
+        {
+          "@type": "Place",
+          "name": "Hyderabad"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "medicalSpecialty": [
+        "Dentistry",
+        "OralSurgeon",
+        "Orthodontics",
+        "PediatricDentistry",
+        "Periodontics",
+        "Prosthodontics"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "480",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61593630516104",
+        "https://www.instagram.com/shrikrishnadental2/",
+        "https://www.pinterest.com/shrikrishnadental/",
+        "https://x.com/Shrikrishnadent",
+        "https://www.linkedin.com/company/shri-krishna-dental-hospital/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://shrikrishnadental.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is the best dental clinic located in Miyapur and Chandanagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shri Krishna Dental Hospital (formerly Jo'Dent) is located at Ground Floor, Allwyn X Roads, near Bank of India, Widia Colony, Hafeezpet, Miyapur, Hyderabad. It conveniently serves patients across Miyapur, Chandanagar, Hafeezpet, and Kondapur."
           }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Shri Krishna Dental Hospital empanelled under EHS / Aarogyasree?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Shri Krishna Dental Hospital is empanelled under the Employees' Health Scheme (EHS) under Aarogyasree for eligible Telangana State Government employees, pensioners, and their dependents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What dental treatments are available at Shri Krishna Dental Hospital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide comprehensive treatments including single & full-mouth dental implants, clear aligners (Invisalign & Spark), single-sitting painless root canals, laser soft tissue dentistry, wisdom tooth removal, pediatric dentistry, and cosmetic smile designing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I book an appointment with a specialist dentist near Hafeezpet or Kondapur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can book an appointment online at https://shrikrishnadental.com/appointment.html or call directly at +91 95154 25522 for same-day or priority consultations."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -1175,11 +1213,13 @@
               <i class="bi bi-shield-check me-1"></i> EHS / Aarogyasree Empanelled
             </span>
           </div>
-          <div class="footer-social-links">
+                    <div class="footer-social-links">
+            <a href="https://www.facebook.com/profile.php?id=61593630516104" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/shrikrishnadental2/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.pinterest.com/shrikrishnadental/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://x.com/Shrikrishnadent" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.linkedin.com/company/shri-krishna-dental-hospital/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="https://wa.me/919515425522" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             <a href="https://maps.google.com/?q=Shri+Krishna+Dental+Hospital+Allwyn+X+Roads+Miyapur+Hyderabad" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps"><i class="bi bi-geo-alt-fill"></i></a>
           </div>
         </div>

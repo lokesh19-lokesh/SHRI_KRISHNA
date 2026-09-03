@@ -67,80 +67,80 @@
 
   <!-- Schema Markup: MedicalWebPage, MedicalProcedure, Breadcrumbs & FAQPage -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://shrikrishnadental.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Dental Implants",
-            "item": "https://shrikrishnadental.com/dental-implants.html"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shrikrishnadental.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dental Implants",
+          "item": "https://shrikrishnadental.com/dental-implants.html"
+        }
+      ]
+    },
+    {
+      "@type": "MedicalProcedure",
+      "@id": "https://shrikrishnadental.com/dental-implants.html#procedure",
+      "name": "Dental Implant Surgery and Restoration",
+      "procedureType": "SurgicalProcedure",
+      "bodyLocation": "Jawbone, Mouth",
+      "description": "Permanent tooth replacement procedure using biocompatible titanium or zirconia fixtures placed into the jawbone with custom crowns or bridges.",
+      "howPerformed": "3D CBCT digital assessment, computer-guided surgical implant fixture insertion, healing osseointegration, abutment connection, and custom zirconia crown fitting."
+    },
+    {
+      "@type": "MedicalWebPage",
+      "name": "Dental Implants in Miyapur, Hyderabad | Procedure, Cost & FAQs",
+      "description": "Comprehensive guide on single tooth, multiple teeth, and All-on-4 dental implants at Shri Krishna Dental Hospital.",
+      "url": "https://shrikrishnadental.com/dental-implants.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are dental implants and how do they work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dental implants are biocompatible titanium posts placed surgically into the jawbone beneath the gums to function as artificial roots for permanent replacement crowns or full-arch bridges."
           }
-        ]
-      },
-      {
-        "@type": "MedicalProcedure",
-        "@id": "https://shrikrishnadental.com/dental-implants.html#procedure",
-        "name": "Dental Implant Surgery and Restoration",
-        "procedureType": "SurgicalProcedure",
-        "bodyLocation": "Jawbone, Mouth",
-        "description": "Permanent tooth replacement procedure using biocompatible titanium or zirconia fixtures placed into the jawbone with custom crowns or bridges.",
-        "howPerformed": "3D CBCT digital assessment, computer-guided surgical implant fixture insertion, healing osseointegration, abutment connection, and custom zirconia crown fitting."
-      },
-      {
-        "@type": "MedicalWebPage",
-        "name": "Dental Implants in Miyapur, Hyderabad | Procedure, Cost & FAQs",
-        "description": "Comprehensive guide on single tooth, multiple teeth, and All-on-4 dental implants at Shri Krishna Dental Hospital.",
-        "url": "https://shrikrishnadental.com/dental-implants.html"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What are dental implants and how do they work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Dental implants are biocompatible titanium posts placed surgically into the jawbone beneath the gums to function as artificial roots for permanent replacement crowns or full-arch bridges."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who is eligible for dental implants in Miyapur and Hafeezpet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Adults missing one or more teeth with healthy gums and sufficient jawbone density are ideal candidates. In cases of low bone volume, bone grafting or basal implants can restore candidacy."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long do dental implants last?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "With proper oral hygiene and regular dental checkups, dental implants can last a lifetime, boasting a clinical success rate of over 98%."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where can I get dental implants near Allwyn X Road and Chandanagar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Shri Krishna Dental Hospital is conveniently located at Allwyn X Roads, Hafeezpet, Miyapur, offering advanced 3D CBCT digital implantology led by senior implantologist Dr. S. K. Krishna."
-            }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is eligible for dental implants in Miyapur and Hafeezpet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adults missing one or more teeth with healthy gums and sufficient jawbone density are ideal candidates. In cases of low bone volume, bone grafting or basal implants can restore candidacy."
           }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do dental implants last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With proper oral hygiene and regular dental checkups, dental implants can last a lifetime, boasting a clinical success rate of over 98%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I get dental implants near Allwyn X Road and Chandanagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shri Krishna Dental Hospital is conveniently located at Allwyn X Roads, Hafeezpet, Miyapur, offering advanced 3D CBCT digital implantology led by senior implantologist Dr. S. K. Krishna."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -530,11 +530,13 @@
               <i class="bi bi-shield-check me-1"></i> EHS / Aarogyasree Empanelled
             </span>
           </div>
-          <div class="footer-social-links">
+                    <div class="footer-social-links">
+            <a href="https://www.facebook.com/profile.php?id=61593630516104" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/shrikrishnadental2/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.pinterest.com/shrikrishnadental/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://x.com/Shrikrishnadent" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.linkedin.com/company/shri-krishna-dental-hospital/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="https://wa.me/919515425522" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             <a href="https://maps.google.com/?q=Shri+Krishna+Dental+Hospital+Allwyn+X+Roads+Miyapur+Hyderabad" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps"><i class="bi bi-geo-alt-fill"></i></a>
           </div>
         </div>
