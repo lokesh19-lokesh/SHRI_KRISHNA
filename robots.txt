@@ -1,0 +1,43 @@
+# Robots.txt for Shri Krishna Dental Hospital
+# Domain: https://shrikrishnadental.com/
+
+User-agent: *
+Allow: /
+Disallow: /vendor/
+
+# Explicit Permissions for AI Search & Answer Engine Crawlers (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# XML Sitemap Declaration
+Sitemap: https://shrikrishnadental.com/sitemap.xml

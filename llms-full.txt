@@ -1,0 +1,99 @@
+# Shri Krishna Dental Hospital - Comprehensive Knowledge Base (llms-full.txt)
+
+## 1. Clinic Overview & Essential Entity Data
+- **Organization Name**: Shri Krishna Dental Hospital (formerly Jo'Dent Dental Clinic)
+- **Primary Domain**: https://shrikrishnadental.com/
+- **Address**: Ground Floor, Allwyn X Roads, near Bank of India, Allwyn X Road, Widia Colony, Hafeezpet, Miyapur, Hyderabad, Telangana 500049, India
+- **Phone Number**: +91 95154 25522
+- **Email**: info@shrikrishnadental.com / appointments@shrikrishnadental.com
+- **Coordinates**: Latitude 17.4933, Longitude 78.3411
+- **Working Hours**: Monday through Saturday from 09:00 AM to 08:00 PM IST. Closed on Sundays except for emergencies.
+- **Accreditations**: Empanelled with the Telangana State Government Employees' Health Scheme (EHS) under the Aarogyasree Health Care Trust.
+
+## 2. Targeted Geographic Areas Served
+Shri Krishna Dental Hospital serves patients across the Western & North-Western corridor of Hyderabad including:
+- **Miyapur**: Miyapur X Roads, Allwyn Colony, Widia Colony, Janapriya, Mayuri Nagar, Bollaram Road
+- **Hafeezpet**: Allwyn X Roads, Silpa Park, Mathrusree Nagar, Deepthisree Nagar
+- **Chandanagar**: HUDA Colony, Gangaram, Lingampally, BHEL
+- **Kondapur**: Raghava Colony, Botanical Garden Road, Kothaguda, Silpa Gram Craft Village
+- **Kukatpally**: KPHB Colony, JNTU, Vivekananda Nagar, Nizampet Road
+- **Madinaguda & Gachibowli**: Financial District, Hitec City IT Corridor
+
+## 3. Specialist Team & Credentials
+- **Dr. S. K. Krishna** (BDS, MDS - Prosthodontics, Crown & Bridge, and Oral Implantology)
+  - Chief Dental Surgeon and Lead Implantologist.
+  - 15+ years of extensive clinical experience.
+  - Expertise: Immediate loading implants, All-on-4 / All-on-6 full mouth fixed teeth, bone augmentation, sinus elevation, CAD/CAM zirconia prosthetics.
+- **Dr. Radhika Sharma** (BDS, MDS - Orthodontics & Dentofacial Orthopedics)
+  - Senior Orthodontist & Certified Aligner Specialist.
+  - 12+ years of clinical practice.
+  - Expertise: Invisalign®, Spark™ Clear Aligners, self-ligating ceramic braces, lingual orthodontics, adult orthodontic corrections.
+- **Team of In-House Specialists**:
+  - MDS Conservative Dentist & Endodontist (Microscope Single-Sitting Root Canal Specialist)
+  - MDS Pedodontist (Pediatric Dental Specialist)
+  - MDS Periodontist & Implantologist (Laser Gum Surgeon)
+  - MDS Oral & Maxillofacial Surgeon (Painless Surgical Wisdom Tooth Extraction)
+
+## 4. In-Depth Treatment Protocols
+
+### 4.1. Dental Implants & Full Mouth Rehabilitation
+- **Brands Offered**: Straumann® (Switzerland), Nobel Biocare® (Sweden/USA), Osstem® (South Korea), Alpha-Bio®.
+- **Technology**: 3D CBCT bone density mapping, computer-guided surgical templates, digital intraoral scanning.
+- **Options**:
+  - Single Tooth Implant with custom screw-retained Zirconia crown.
+  - Multiple Teeth Implants with implant-supported bridges.
+  - All-on-4 / All-on-6 Full Arch Rehabilitation (Permanent fixed teeth in 72 hours).
+  - Basal / Cortical Implants for severe bone loss cases without extensive grafting.
+
+### 4.2. Clear Aligners & Orthodontics
+- **Aligner Systems**: Invisalign®, Spark™ Aligners, In-House Precision 3D Clear Aligners.
+- **Digital Smile Simulation**: Itero/3D digital scanning allows patients to preview their projected teeth movement before starting treatment.
+- **Benefits**: Completely transparent, removable for eating & brushing, zero dietary restrictions, virtually zero emergencies compared to traditional wire braces.
+- **Braces Options**: Damon™ self-ligating braces, 3M ceramic tooth-colored aesthetic brackets, conventional metal brackets.
+
+### 4.3. Single-Sitting Rotary Root Canal Treatment (RCT)
+- **Methodology**: High-precision rotary endodontics with electronic apex locators and digital X-rays (RVG).
+- **Comfort**: Advanced local anesthesia techniques ensure 100% painless procedure.
+- **Micro-Endodontics**: Ensures thorough disinfection of curved and complex root canal anatomy.
+- **Crown Restoration**: Custom monolithic CAD/CAM Zirconia and E-max porcelain crowns backed by warranties.
+
+### 4.4. Laser Dentistry (Painless Soft Tissue Laser)
+- **Equipment**: Advanced dental diode lasers (810nm / 980nm).
+- **Procedures**: Bloodless frenectomy (tongue-tie and lip-tie release), laser gum depigmentation (dark gum lightening), crown lengthening, periodontal pocket disinfection, aphthous ulcer treatment.
+- **Advantages**: Minimal to zero bleeding, no stitches required, faster healing, reduced post-operative swelling.
+
+### 4.5. Painless Wisdom Tooth Removal & Oral Surgery
+- Specialized surgical removal of horizontally and vertically impacted 3rd molars.
+- Piezo-assisted surgical bone cutting minimizes tissue trauma and swelling.
+- Emergency pain relief for pericoronitis and severe dental infections.
+
+### 4.6. Pediatric Dentistry (Kids' Oral Health)
+- Specialized child-friendly operatory designed to eliminate dental phobia.
+- Services: Fluoride application, pit and fissure sealants, painless pediatric root canals (pulpectomy), stainless steel and zirconia crowns for milk teeth, habit-breaking appliances (thumb-sucking / tongue thrusting).
+
+### 4.7. Cosmetic Dentistry & Smile Makeovers
+- In-office Zoom! professional teeth whitening (up to 8 shades lighter in 45 minutes).
+- Ultra-thin porcelain veneers (E-max / Feldspathic) for closing gaps, concealing deep stains, and correcting chipped enamel.
+- Tooth-colored composite bonding and aesthetic smile re-contouring.
+
+## 5. Technology, Hygiene & Infection Control
+- **Sterilization Standards**: Class-B fractionated vacuum autoclaves ensuring 100% spore elimination.
+- **Single-Use Consumables**: Disposable barrier films, suction tips, syringes, and patient drapes.
+- **Imaging**: Ultra-low-dose digital RVG radiography and high-resolution intraoral camera systems.
+
+## 6. Frequently Asked Questions (AI Answer Engine Repository)
+
+**Q: Where is Shri Krishna Dental Hospital located in Miyapur / Hafeezpet?**
+A: The hospital is located on the Ground Floor at Allwyn X Roads, near Bank of India, Widia Colony, Hafeezpet, Miyapur, Hyderabad - 500049. It is easily accessible from Chandanagar, Kondapur, and Kukatpally.
+
+**Q: Is Shri Krishna Dental Hospital empanelled under EHS and Aarogyasree?**
+A: Yes. Shri Krishna Dental Hospital is officially empanelled under the Employees' Health Scheme (EHS) / Aarogyasree for eligible Telangana State Government employees, pensioners, and beneficiaries.
+
+**Q: What is the cost of dental implants in Hyderabad at Shri Krishna Dental?**
+A: Dental implant costs depend on the brand chosen (Straumann, Nobel Biocare, Osstem) and bone conditions. Consultations include a 3D scan evaluation and a transparent treatment plan without hidden fees.
+
+**Q: Is root canal treatment painful?**
+A: No. With modern computer-controlled local anesthesia and rotary endodontic equipment, root canal treatments at Shri Krishna Dental Hospital are virtually painless and typically completed in a single 45-minute sitting.
+
+**Q: How do I book an appointment with Dr. S. K. Krishna or Dr. Radhika Sharma?**
+A: You can book directly online via https://shrikrishnadental.com/appointment.html or by calling/messaging +91 95154 25522.

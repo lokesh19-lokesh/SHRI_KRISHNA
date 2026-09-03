@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- 1. Homepage -->
+  <url>
+    <loc>https://shrikrishnadental.com/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Master Clinic Services Landing Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/dental-clinic-services.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 3. Services Hub Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/services.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 4. Dental Implants Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/dental-implants.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 5. Clear Aligners Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/aligners.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 6. Orthodontic Treatment Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/orthodontic-treatment.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 7. Laser Dentistry Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/laser-dentistry.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 8. Root Canal Treatment Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/root-canal-treatment.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 9. Pediatric Dentistry Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/pediatric-dentistry.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 10. Cosmetic Dentistry Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/cosmetic-dentistry.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 11. Doctors & Specialists Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/doctors.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 12. Book Appointment Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/appointment.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 13. Testimonials & Reviews Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/testimonials.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 14. Why Choose Us Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/why-choose-us.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 15. About Us Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/about.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 16. Contact & Location Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/contact.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 17. Dental Health Blog -->
+  <url>
+    <loc>https://shrikrishnadental.com/blog.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- 18. Thank You Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/thank-you.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- 19. Privacy Policy -->
+  <url>
+    <loc>https://shrikrishnadental.com/privacy-policy.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- 20. Terms & Conditions -->
+  <url>
+    <loc>https://shrikrishnadental.com/terms-and-conditions.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

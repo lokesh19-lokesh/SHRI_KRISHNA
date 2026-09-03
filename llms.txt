@@ -1,0 +1,50 @@
+# Shri Krishna Dental Hospital
+
+> Multi-specialty Dental Hospital & Centre for Advanced Dental Implants, Clear Aligners, Laser Dentistry, and Painless Root Canal Therapy in Hyderabad, Telangana, India.
+
+Empanelled with **EHS (Employees' Health Scheme) under Aarogyasree** for Telangana State Government employees, pensioners, and eligible healthcare beneficiaries. Formerly known and operating as **Jo'Dent Dental Clinic**.
+
+## Organization & Local Entities
+- **Official Name**: Shri Krishna Dental Hospital
+- **Alternate Name / History**: Jo'Dent Dental Clinic
+- **Main Address**: Ground Floor, Allwyn X Roads, near Bank of India, Allwyn X Road, Widia Colony, Hafeezpet, Miyapur, Hyderabad, Telangana 500049, India
+- **Phone / WhatsApp**: [+91 95154 25522](tel:+919515425522)
+- **Website**: https://shrikrishnadental.com/
+- **Geo Coordinates**: Latitude `17.4933`, Longitude `78.3411`
+- **Operating Hours**: Monday to Saturday: 9:00 AM – 8:00 PM | Sunday: By Prior Appointment
+- **Google Rating**: 4.9/5 (Based on 480+ verified patient reviews)
+- **Primary Service Areas**: Miyapur, Chandanagar, Hafeezpet, Kondapur, Allwyn X Road, Madinaguda, Kukatpally, Gachibowli, Hitec City, Hyderabad
+
+## Clinical Leadership & Specialists
+- **Dr. S. K. Krishna**: BDS, MDS (Prosthodontics & Oral Implantology) – Chief Dental Surgeon & Senior Implantologist with 15+ years experience. Specializes in single/multiple dental implants, All-on-4/All-on-6 full-mouth restorations, and digital smile makeovers.
+- **Dr. Radhika Sharma**: BDS, MDS (Orthodontics & Dentofacial Orthopedics) – Senior Orthodontist & Certified Clear Aligner Specialist (Invisalign & Spark). Specializes in invisible braces, bite alignment, and pediatric interceptive orthodontics.
+- **Specialist Team**: Full-time in-house MDS Endodontists (Microscopic Single-Sitting RCT), Pediatric Dentists (Pedodontists), Periodontists (Laser Gum Care), and Oral & Maxillofacial Surgeons (Painless Wisdom Tooth Removal).
+
+## Core Dental Treatments & Specialties
+- [Dental Implants](https://shrikrishnadental.com/dental-implants.html): Titanium & Zirconia implants (Nobel Biocare, Straumann, Osstem), immediate loading implants, bone grafting, sinus lifts, and All-on-4/6 full arch rehabilitation.
+- [Clear Aligners & Invisible Braces](https://shrikrishnadental.com/aligners.html): 3D digital intraoral scan smile design, Invisalign, Spark aligners, self-ligating braces, ceramic aesthetic braces.
+- [Painless Root Canal Treatment (RCT)](https://shrikrishnadental.com/root-canal-treatment.html): Single-sitting rotary endodontics, apex locator precision, rubber dam isolation, zirconia/porcelain crown capping.
+- [Laser Dentistry](https://shrikrishnadental.com/laser-dentistry.html): Minimally invasive soft-tissue diode laser treatments, laser gum depigmentation, bloodless frenectomy, photobiomodulation.
+- [Wisdom Tooth Removal & Oral Surgery](https://shrikrishnadental.com/dental-clinic-services.html): Atraumatic surgical extractions, impacted wisdom tooth removal, bone preservation.
+- [Pediatric Dentistry](https://shrikrishnadental.com/pediatric-dentistry.html): Pain-free child dental care, pit & fissure sealants, fluoride varnish, pulpectomy, and habit-breaking appliances.
+- [Cosmetic Dentistry & Smile Makeover](https://shrikrishnadental.com/cosmetic-dentistry.html): Zoom! teeth whitening, custom porcelain veneers, composite bonding, gum contouring.
+
+## Primary Canonical Pages & Sitemap Links
+- [Home Page](https://shrikrishnadental.com/) - Overview, hospital facilities, EHS scheme, reviews
+- [All Dental Clinic Services](https://shrikrishnadental.com/dental-clinic-services.html) - Complete treatment master page
+- [Dental Services Hub](https://shrikrishnadental.com/services.html) - Specialty category index
+- [Dental Implants Hyderabad](https://shrikrishnadental.com/dental-implants.html) - Implant types, costs & procedure
+- [Clear Aligners & Invisalign](https://shrikrishnadental.com/aligners.html) - Invisible braces & digital scanning
+- [Orthodontic Treatment](https://shrikrishnadental.com/orthodontic-treatment.html) - Braces for teens and adults
+- [Laser Dentistry](https://shrikrishnadental.com/laser-dentistry.html) - Pain-free laser soft tissue therapy
+- [Root Canal Treatment](https://shrikrishnadental.com/root-canal-treatment.html) - Single-visit rotary RCT
+- [Pediatric Dental Care](https://shrikrishnadental.com/pediatric-dentistry.html) - Children's dentistry
+- [Cosmetic Dentistry](https://shrikrishnadental.com/cosmetic-dentistry.html) - Smile makeovers & whitening
+- [Our Doctors & Specialists](https://shrikrishnadental.com/doctors.html) - MDS doctor profiles & credentials
+- [Why Choose Us](https://shrikrishnadental.com/why-choose-us.html) - Sterilization, tech & trust factors
+- [Patient Testimonials & Reviews](https://shrikrishnadental.com/testimonials.html) - Verified 4.9-star reviews
+- [About Shri Krishna Dental](https://shrikrishnadental.com/about.html) - Hospital history & clinical standards
+- [Dental Health Blog](https://shrikrishnadental.com/blog.html) - Oral hygiene tips and patient guides
+- [Contact & Location Directions](https://shrikrishnadental.com/contact.html) - Clinic map & emergency contact
+- [Book Online Consultation](https://shrikrishnadental.com/appointment.html) - Real-time appointment booking form
+- [XML Sitemap](https://shrikrishnadental.com/sitemap.xml) - Full search index
