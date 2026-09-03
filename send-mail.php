@@ -39,11 +39,13 @@ function clean_input($data) {
 $form_type   = clean_input($_POST['form_type'] ?? 'General Dental Inquiry');
 $full_name   = clean_input($_POST['fullName'] ?? $_POST['name'] ?? $_POST['contactName'] ?? $_POST['lpName'] ?? 'Valued Patient');
 $phone       = clean_input($_POST['phone'] ?? $_POST['contactPhone'] ?? $_POST['lpPhone'] ?? 'Not Provided');
-$email       = clean_input($_POST['email'] ?? $_POST['contactEmail'] ?? '');
+$email_raw   = clean_input($_POST['email'] ?? $_POST['contactEmail'] ?? '');
+$email       = !empty($email_raw) ? $email_raw : 'Not Provided';
 $service     = clean_input($_POST['serviceSelect'] ?? $_POST['service'] ?? $_POST['contactService'] ?? $_POST['lpService'] ?? 'General Consultation');
 $pref_date   = clean_input($_POST['prefDate'] ?? $_POST['date'] ?? $_POST['contactDate'] ?? $_POST['lpDate'] ?? 'Flexible / As soon as possible');
 $pref_time   = clean_input($_POST['prefTime'] ?? $_POST['time'] ?? $_POST['contactTime'] ?? $_POST['lpTime'] ?? 'Flexible');
-$message     = clean_input($_POST['message'] ?? $_POST['contactMsg'] ?? '');
+$message_raw = clean_input($_POST['message'] ?? $_POST['contactMsg'] ?? '');
+$message     = !empty($message_raw) ? $message_raw : 'None';
 $is_ehs      = !empty($_POST['ehs']) || !empty($_POST['lpEhsCheck']) ? 'Yes (EHS / Aarogyasree Cardholder)' : 'No';
 
 // Set Indian Standard Time
@@ -60,6 +62,9 @@ if (empty($full_name) || empty($phone) || $phone === 'Not Provided') {
 
 // Prepare Subject Line
 $subject = "[$hospital_name] New $form_type: $full_name ($phone)";
+
+// Optional reply button in email
+$email_btn = ($email !== 'Not Provided') ? "<a href=\"mailto:$email\" class=\"action-btn\">✉️ Reply via Email</a>" : "";
 
 // Build HTML Email Body
 $html_body = <<<HTML
@@ -137,7 +142,7 @@ $html_body = <<<HTML
 
       <div class="action-box">
         <a href="tel:$phone" class="action-btn action-btn-gold">📞 Call Patient Now</a>
-        <a href="mailto:$email" class="action-btn">✉️ Reply via Email</a>
+        $email_btn
       </div>
     </div>
 
