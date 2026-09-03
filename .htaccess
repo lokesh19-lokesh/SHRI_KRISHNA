@@ -100,5 +100,27 @@
 # Prevent directory listing
 Options -Indexes
 
+# Protect sensitive database & log files
+<FilesMatch "\.(csv|log|json|txt|env|ini)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Allow public access to llms.txt, llms-full.txt, and robots.txt
+<FilesMatch "^(robots\.txt|llms\.txt|llms-full\.txt)$">
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+  </IfModule>
+</FilesMatch>
+
 # Custom 404 Fallback
 ErrorDocument 404 /index.html

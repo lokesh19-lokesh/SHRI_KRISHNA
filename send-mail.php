@@ -1,28 +1,88 @@
 <?php
 /**
- * Shri Krishna Dental Hospital - Unified Form Mailer Backend
+ * Shri Krishna Dental Hospital - Unified Production Form Mailer Backend
  * Target Recipient: shrikrishnadental2@gmail.com
  * Handles: appointment.html, contact.html, and dental-clinic-services.html
  */
 
-// Set response headers for AJAX calls
-header('Content-Type: application/json; charset=UTF-8');
+// Error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
 
-// Target Recipient Email
-$to_email = 'shrikrishnadental2@gmail.com';
+// Set Indian Standard Time
+date_default_timezone_set('Asia/Kolkata');
+$timestamp = date('d-M-Y, h:i A') . ' IST';
+$ip_address = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
+
+// Target Recipient Email & Hospital Info
+$to_email      = 'shrikrishnadental2@gmail.com';
 $hospital_name = 'Shri Krishna Dental Hospital';
-$from_email = 'noreply@shrikrishnadental.com';
+$from_email    = 'noreply@shrikrishnadental.com';
 
-// Verify POST Request
+/* --------------------------------------------------------------------------
+   1. BUILT-IN DIAGNOSTIC TEST MODE (GET /send-mail.php?test=1)
+   -------------------------------------------------------------------------- */
+if (isset($_GET['test'])) {
+    header('Content-Type: text/html; charset=UTF-8');
+    
+    $test_subject = "[DIAGNOSTIC TEST] Shri Krishna Dental Hospital Mail Check (" . date('h:i:s A') . ")";
+    $test_body = <<<HTML
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body style="font-family: Arial, sans-serif; background: #f8fafc; padding: 20px;">
+  <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 10px; padding: 25px; border: 1px solid #e2e8f0;">
+    <h2 style="color: #031958; margin-top: 0;">🏥 Shri Krishna Dental Hospital - System Test</h2>
+    <p>This is a test notification verifying delivery to <strong>$to_email</strong>.</p>
+    <p><strong>Sent At:</strong> $timestamp<br><strong>Server:</strong> {$_SERVER['SERVER_NAME']}</p>
+    <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+    <p style="color: #16a34a; font-weight: bold;">✅ If you are reading this email in your Inbox, your mail system is working perfectly!</p>
+  </div>
+</body>
+</html>
+HTML;
+
+    $headers = [];
+    $headers[] = 'MIME-Version: 1.0';
+    $headers[] = 'Content-Type: text/html; charset=UTF-8';
+    $headers[] = "From: $hospital_name <$from_email>";
+    $headers[] = "Reply-To: $to_email";
+    $headers[] = 'X-Mailer: PHP/' . phpversion();
+    $headers[] = 'Date: ' . date('r');
+    $headers[] = 'Message-ID: <' . time() . '-' . md5($to_email) . '@' . ($_SERVER['SERVER_NAME'] ?? 'shrikrishnadental.com') . '>';
+
+    $sent = @mail($to_email, $test_subject, $test_body, implode("\r\n", $headers), "-f$from_email");
+
+    echo "<!DOCTYPE html><html><head><title>Mail System Diagnostic Test</title>";
+    echo "<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:700px;margin:30px auto;padding:20px;background:#f8fafc;color:#1e293b;} .card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.08);border:1px solid #e2e8f0;} .success{color:#16a34a;font-weight:700;} .btn{display:inline-block;background:#031958;color:#fff;text-decoration:none;padding:10px 18px;border-radius:6px;font-weight:600;margin-top:10px;}</style></head><body>";
+    echo "<div class='card'>";
+    echo "<h2 style='color:#031958;margin-top:0;'>🏥 Shri Krishna Dental Hospital - Mail Diagnostic Test</h2>";
+    echo "<p>Recipient: <strong>$to_email</strong></p>";
+    if ($sent) {
+        echo "<p class='success'>✅ SUCCESS: Diagnostic email sent directly to $to_email!</p>";
+        echo "<p>Please check your Gmail inbox (and Spam folder) to confirm receipt.</p>";
+    } else {
+        echo "<p style='color:#dc2626;font-weight:700;'>❌ Error sending test mail.</p>";
+    }
+    echo "<a href='appointment.html' class='btn'>📅 Test Appointment Form Now</a>";
+    echo "</div></body></html>";
+    exit;
+}
+
+/* --------------------------------------------------------------------------
+   2. VERIFY POST REQUEST
+   -------------------------------------------------------------------------- */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo json_encode(['status' => 'error', 'message' => 'Method Not Allowed']);
+    header('Content-Type: application/json; charset=UTF-8');
+    echo json_encode(['status' => 'error', 'message' => 'Method Not Allowed. Use POST to submit form data.']);
     exit;
 }
 
 // Anti-Spam Honeypot Check
 if (!empty($_POST['_gotcha']) || !empty($_POST['website'])) {
-    // Silently return success to fool bots
+    header('Content-Type: application/json; charset=UTF-8');
     echo json_encode(['status' => 'success', 'message' => 'Thank you for reaching out.']);
     exit;
 }
@@ -36,11 +96,11 @@ function clean_input($data) {
 }
 
 // Extract & Sanitize Form Data
-$form_type   = clean_input($_POST['form_type'] ?? 'General Dental Inquiry');
+$form_type   = clean_input($_POST['form_type'] ?? 'Online Appointment Request');
 $full_name   = clean_input($_POST['fullName'] ?? $_POST['name'] ?? $_POST['contactName'] ?? $_POST['lpName'] ?? 'Valued Patient');
 $phone       = clean_input($_POST['phone'] ?? $_POST['contactPhone'] ?? $_POST['lpPhone'] ?? 'Not Provided');
 $email_raw   = clean_input($_POST['email'] ?? $_POST['contactEmail'] ?? '');
-$email       = !empty($email_raw) ? $email_raw : 'Not Provided';
+$email       = (!empty($email_raw) && filter_var($email_raw, FILTER_VALIDATE_EMAIL)) ? $email_raw : 'Not Provided';
 $service     = clean_input($_POST['serviceSelect'] ?? $_POST['service'] ?? $_POST['contactService'] ?? $_POST['lpService'] ?? 'General Consultation');
 $pref_date   = clean_input($_POST['prefDate'] ?? $_POST['date'] ?? $_POST['contactDate'] ?? $_POST['lpDate'] ?? 'Flexible / As soon as possible');
 $pref_time   = clean_input($_POST['prefTime'] ?? $_POST['time'] ?? $_POST['contactTime'] ?? $_POST['lpTime'] ?? 'Flexible');
@@ -48,25 +108,52 @@ $message_raw = clean_input($_POST['message'] ?? $_POST['contactMsg'] ?? '');
 $message     = !empty($message_raw) ? $message_raw : 'None';
 $is_ehs      = !empty($_POST['ehs']) || !empty($_POST['lpEhsCheck']) ? 'Yes (EHS / Aarogyasree Cardholder)' : 'No';
 
-// Set Indian Standard Time
-date_default_timezone_set('Asia/Kolkata');
-$timestamp = date('d-M-Y, h:i A') . ' IST';
-$ip_address = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
-
 // Basic Validation
 if (empty($full_name) || empty($phone) || $phone === 'Not Provided') {
     http_response_code(400);
+    header('Content-Type: application/json; charset=UTF-8');
     echo json_encode(['status' => 'error', 'message' => 'Please provide your name and phone number.']);
     exit;
 }
 
-// Prepare Subject Line
+/* --------------------------------------------------------------------------
+   3. ZERO-LOSS LOCAL LEAD DATABASE BACKUP (leads_backup.csv)
+   -------------------------------------------------------------------------- */
+$csv_file = __DIR__ . '/leads_backup.csv';
+$csv_exists = file_exists($csv_file);
+
+$lead_row = [
+    $timestamp,
+    $form_type,
+    $full_name,
+    $phone,
+    $email,
+    $service,
+    $pref_date,
+    $pref_time,
+    $is_ehs,
+    str_replace(["\r", "\n"], ' ', $message),
+    $ip_address
+];
+
+$fp = @fopen($csv_file, 'a');
+if ($fp) {
+    if (!$csv_exists) {
+        fputcsv($fp, ['Timestamp', 'Form Type', 'Patient Name', 'Phone', 'Email', 'Service', 'Preferred Date', 'Preferred Time', 'EHS Cardholder', 'Symptoms / Notes', 'IP Address']);
+    }
+    fputcsv($fp, $lead_row);
+    fclose($fp);
+}
+
+/* --------------------------------------------------------------------------
+   4. CONSTRUCT EMAIL CONTENT
+   -------------------------------------------------------------------------- */
 $subject = "[$hospital_name] New $form_type: $full_name ($phone)";
 
-// Optional reply button in email
-$email_btn = ($email !== 'Not Provided') ? "<a href=\"mailto:$email\" class=\"action-btn\">✉️ Reply via Email</a>" : "";
+$email_btn = ($email !== 'Not Provided') 
+    ? "<a href=\"mailto:$email\" style=\"display: inline-block; background-color: #031958; color: #ffffff !important; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; margin: 4px;\">✉️ Reply via Email</a>" 
+    : "";
 
-// Build HTML Email Body
 $html_body = <<<HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -85,8 +172,7 @@ $html_body = <<<HTML
     .table-details td.label { width: 35%; font-weight: 600; color: #475569; background-color: #f8fafc; }
     .table-details td.value { color: #0f172a; font-weight: 500; }
     .action-box { margin-top: 25px; padding: 15px; background-color: #f0f4f9; border-radius: 8px; text-align: center; }
-    .action-btn { display: inline-block; background-color: #031958; color: #ffffff !important; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; font-size: 14px; margin: 4px; }
-    .action-btn-gold { background-color: #c7a97b; color: #031958 !important; }
+    .action-btn-gold { display: inline-block; background-color: #c7a97b; color: #031958 !important; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: 700; font-size: 14px; margin: 4px; }
     .footer { background-color: #f8fafc; padding: 15px 30px; text-align: center; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; }
   </style>
 </head>
@@ -141,7 +227,7 @@ $html_body = <<<HTML
       </table>
 
       <div class="action-box">
-        <a href="tel:$phone" class="action-btn action-btn-gold">📞 Call Patient Now</a>
+        <a href="tel:$phone" class="action-btn-gold">📞 Call Patient Now ($phone)</a>
         $email_btn
       </div>
     </div>
@@ -154,91 +240,49 @@ $html_body = <<<HTML
 </html>
 HTML;
 
-// Build Plain Text Fallback
-$text_body = <<<TEXT
-==================================================
-$hospital_name - $form_type
-==================================================
-Patient Name: $full_name
-Phone Number: $phone
-Email Address: $email
-Service / Treatment: $service
-Preferred Date: $pref_date
-Preferred Time: $pref_time
-EHS Cardholder: $is_ehs
-Symptoms / Notes: $message
-Submitted At: $timestamp
-IP Address: $ip_address
-==================================================
-TEXT;
+/* --------------------------------------------------------------------------
+   5. SEND EMAIL DIRECTLY VIA WORKING PHP MAIL()
+   -------------------------------------------------------------------------- */
+$headers = [];
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'Content-Type: text/html; charset=UTF-8';
+$headers[] = "From: $hospital_name <$from_email>";
 
-$mail_sent = false;
-
-// Attempt 1: Try using Composer PHPMailer if available
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    try {
-        require_once __DIR__ . '/vendor/autoload.php';
-        if (class_exists('PHPMailer\PHPMailer\PHPMailer')) {
-            $mail = new PHPMailer\PHPMailer\PHPMailer(true);
-            
-            // Recipient & Sender
-            $mail->setFrom($from_email, $hospital_name);
-            $mail->addAddress($to_email, 'Shri Krishna Dental Reception');
-            
-            if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $mail->addReplyTo($email, $full_name);
-            }
-            
-            // Content
-            $mail->isHTML(true);
-            $mail->CharSet = 'UTF-8';
-            $mail->Subject = $subject;
-            $mail->Body    = $html_body;
-            $mail->AltBody = $text_body;
-            
-            $mail->send();
-            $mail_sent = true;
-        }
-    } catch (Exception $e) {
-        // Fall back to standard PHP mail()
-        $mail_sent = false;
-    }
+if ($email !== 'Not Provided') {
+    $headers[] = "Reply-To: $full_name <$email>";
+} else {
+    $headers[] = "Reply-To: $to_email";
 }
 
-// Attempt 2: Standard PHP mail() Fallback
+$headers[] = 'X-Mailer: PHP/' . phpversion();
+$headers[] = 'Date: ' . date('r');
+$headers[] = 'Message-ID: <' . time() . '-' . md5($phone . $timestamp) . '@' . ($_SERVER['SERVER_NAME'] ?? 'shrikrishnadental.com') . '>';
+
+$headers_str = implode("\r\n", $headers);
+
+// Primary Attempt: Use mail() with -f envelope flag (Proven working on GoDaddy/SecureServer!)
+$mail_sent = @mail($to_email, $subject, $html_body, $headers_str, "-f$from_email");
+
+// Secondary Fallback if 5th parameter is restricted
 if (!$mail_sent) {
-    $headers = [];
-    $headers[] = 'MIME-Version: 1.0';
-    $headers[] = 'Content-type: text/html; charset=UTF-8';
-    $headers[] = "From: $hospital_name <$from_email>";
-    if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $headers[] = "Reply-To: $full_name <$email>";
-    }
-    $headers[] = "X-Mailer: PHP/" . phpversion();
-    
-    $mail_sent = @mail($to_email, $subject, $html_body, implode("\r\n", $headers));
+    $mail_sent = @mail($to_email, $subject, $html_body, $headers_str);
 }
 
-// Check if request was AJAX or Traditional Form POST
-$is_ajax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
-if (!$is_ajax && isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') === false) {
-    // If submitted as standard form POST from browser, redirect to thank-you.html
+/* --------------------------------------------------------------------------
+   6. RESPONSE HANDLING (AJAX JSON vs TRADITIONAL POST)
+   -------------------------------------------------------------------------- */
+$is_ajax = (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')
+           || (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false);
+
+if ($is_ajax) {
+    header('Content-Type: application/json; charset=UTF-8');
+    echo json_encode([
+        'status' => 'success',
+        'message' => 'Thank you! Your appointment request has been received. Our team will contact you shortly.',
+        'redirect' => 'thank-you.html'
+    ]);
+    exit;
+} else {
     header('Location: thank-you.html');
     exit;
-}
-
-// Return JSON Response for AJAX
-if ($mail_sent) {
-    echo json_encode([
-        'status' => 'success',
-        'message' => 'Thank you! Your inquiry has been sent successfully. Our team will contact you shortly.',
-        'redirect' => 'thank-you.html'
-    ]);
-} else {
-    // Even if local mail server is unconfigured, return friendly success to not break frontend UX
-    echo json_encode([
-        'status' => 'success',
-        'message' => 'Your consultation request has been received. Our reception desk will contact you shortly.',
-        'redirect' => 'thank-you.html'
-    ]);
 }
