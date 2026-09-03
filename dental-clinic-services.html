@@ -346,9 +346,14 @@
               Fill the form below to reserve your priority doctor consultation.
             </p>
 
-            <form id="lpAppointmentForm" action="send-mail.php" method="POST" novalidate>
-              <input type="hidden" name="form_type" value="Priority Dental Consultation">
-              <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
+            <form id="lpAppointmentForm" action="https://formsubmit.co/shrikrishnadental2@gmail.com" method="POST" novalidate>
+              <input type="hidden" name="_next" value="https://shrikrishnadental.com/thank-you.html">
+              <input type="hidden" name="_subject" value="[Shri Krishna Dental Hospital] New Priority Consultation Request">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="text" name="_honey" style="display:none !important;" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="Hospital" value="Shri Krishna Dental Hospital">
+              <input type="hidden" name="Form_Type" value="Priority Dental Consultation">
               
               <div class="mb-3">
                 <label for="lpName" class="form-label small fw-semibold text-navy">Full Name *</label>

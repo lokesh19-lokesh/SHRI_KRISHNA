@@ -163,25 +163,30 @@ function initFormValidation() {
 
         // Provide immediate visual loading state on submit button
         const submitBtn = form.querySelector('button[type="submit"]');
-        let originalBtnHtml = '';
-        if (submitBtn) {
-          originalBtnHtml = submitBtn.innerHTML;
-          submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Submitting...';
+        // Store original button HTML on data attribute if not already stored
+        if (!submitBtn.dataset.originalHtml) {
+          submitBtn.dataset.originalHtml = submitBtn.innerHTML;
         }
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Submitting...';
 
         const formData = new FormData(form);
-        const actionUrl = form.getAttribute('action') || 'send-mail.php';
+        let actionUrl = form.getAttribute('action') || 'https://formsubmit.co/shrikrishnadental2@gmail.com';
+        
+        // Use FormSubmit AJAX endpoint for seamless in-page dispatch
+        if (actionUrl.includes('formsubmit.co') && !actionUrl.includes('/ajax/')) {
+          actionUrl = actionUrl.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+        }
 
-        // Submit via AJAX Fetch to PHP mailer
+        // Submit via AJAX Fetch
         fetch(actionUrl, {
           method: 'POST',
           body: formData,
           headers: {
-            'X-Requested-With': 'XMLHttpRequest'
+            'Accept': 'application/json'
           }
         })
-        .then((response) => response.json().catch(() => ({ status: 'success' })))
+        .then((response) => response.json().catch(() => ({ success: true })))
         .then((data) => {
           // If the form has an in-page feedback container and wants to stay on page
           const inPageFeedback = form.querySelector('#lpFormFeedback');
@@ -189,26 +194,38 @@ function initFormValidation() {
             inPageFeedback.classList.remove('d-none');
             form.reset();
             form.classList.remove('was-validated');
-            if (submitBtn) {
+            if (submitBtn && submitBtn.dataset.originalHtml) {
               submitBtn.disabled = false;
-              submitBtn.innerHTML = originalBtnHtml;
+              submitBtn.innerHTML = submitBtn.dataset.originalHtml;
             }
             setTimeout(() => {
               window.location.href = 'thank-you.html';
             }, 800);
           } else {
             // Redirect to thank you page
-            window.location.href = data.redirect || 'thank-you.html';
+            window.location.href = 'thank-you.html';
           }
         })
         .catch((err) => {
-          console.warn('Form mailer notification:', err);
-          // Gracefully fallback to redirecting
-          window.location.href = 'thank-you.html';
+          console.warn('AJAX fetch encountered issue, submitting form natively:', err);
+          // Fallback to direct native form submit
+          form.submit();
         });
       },
       false
     );
+  });
+
+  // Handle browser Back button (BFCache) to instantly reset form submit buttons
+  window.addEventListener('pageshow', (event) => {
+    forms.forEach((form) => {
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn && submitBtn.dataset.originalHtml) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitBtn.dataset.originalHtml;
+      }
+      form.classList.remove('was-validated');
+    });
   });
 }
 
