@@ -515,18 +515,21 @@
 
         <div class="col-lg-3">
           <h4 class="footer-heading">Hospital Contact</h4>
-          <div class="footer-contact-item">
+          <address class="footer-contact-item" itemscope itemtype="https://schema.org/PostalAddress">
             <i class="bi bi-geo-alt"></i>
-            <div>Ground Floor, Allwyn X Roads, near Bank of India, Widia Colony, Hafeezpet, Miyapur, Hyderabad,
-              Telangana 500049</div>
-          </div>
+            <div>
+              <span itemprop="streetAddress">Ground Floor, Allwyn X Roads, near Bank of India, Widia Colony</span>,
+              <span itemprop="addressLocality">Hafeezpet, Miyapur</span>,
+              <span itemprop="addressRegion">Hyderabad, Telangana</span> <span itemprop="postalCode">500049</span>
+            </div>
+          </address>
           <div class="footer-contact-item">
             <i class="bi bi-telephone"></i>
-            <div><a href="tel:+919515425522">+91 95154 25522</a></div>
+            <div><a href="tel:+919515425522" itemprop="telephone">+91 95154 25522</a></div>
           </div>
           <div class="footer-contact-item">
             <i class="bi bi-envelope"></i>
-            <div><a href="mailto:[HospitalEmailAddress]">[Hospital Email Address]</a></div>
+            <div><a href="mailto:shrikrishnadental2@gmail.com" itemprop="email">shrikrishnadental2@gmail.com</a></div>
           </div>
           <div class="footer-contact-item">
             <i class="bi bi-clock"></i>

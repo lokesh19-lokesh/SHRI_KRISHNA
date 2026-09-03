@@ -101,6 +101,11 @@ a {
   transition: var(--transition-fast);
 }
 
+address {
+  font-style: normal;
+  margin-bottom: 0;
+}
+
 /* --------------------------------------------------------------------------
    GLOBAL LAYOUT & TYPOGRAPHY UTILITIES (Zero Inline Styles)
    -------------------------------------------------------------------------- */
