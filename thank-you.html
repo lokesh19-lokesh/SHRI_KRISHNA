@@ -56,7 +56,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2.0">
   <style>
     .success-icon-wrapper {
       width: 90px;
@@ -174,17 +174,23 @@
     </div>
   </nav>
 
-  <!-- Page Header Banner -->
-  <section class="page-header-banner text-center position-relative">
+  <!-- Inner Hero Header Banner -->
+  <header class="inner-hero text-center">
     <div class="container">
-      <span class="eyebrow eyebrow-champagne">CONFIRMATION</span>
-      <h1 class="page-header-title">Thank You!</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-custom justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Confirmation</li>
+        </ol>
+      </nav>
+      <span class="eyebrow" style="color: var(--champagne-gold); letter-spacing: 2px;">CONSULTATION REQUEST REGISTERED</span>
+      <h1 class="text-white mb-2" style="font-family: var(--font-heading); font-size: 2.6rem;">Thank You!</h1>
       <div class="gold-divider center"></div>
-      <p class="text-ivory lead mx-auto" style="max-width: 620px;">
+      <p class="text-champagne lead mx-auto mb-0" style="max-width: 620px; font-size: 1.15rem; font-weight: 500;">
         Your consultation request has been successfully registered with our reception desk.
       </p>
     </div>
-  </section>
+  </header>
 
   <!-- Confirmation Details Section -->
   <section class="section-padding bg-white">
