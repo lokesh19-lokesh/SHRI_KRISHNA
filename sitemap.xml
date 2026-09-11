@@ -84,7 +84,39 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- 11. Doctors & Specialists Page -->
+  <!-- 11. Periodontal Therapy & Gum Surgery Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/periodontal-therapy.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 12. Prosthodontics & Dentures Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/prosthodontics.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 13. Oral & Maxillofacial Surgery Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/oral-surgery.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 14. Restorative Dentistry Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/restorative-dentistry.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 15. Doctors & Specialists Page -->
   <url>
     <loc>https://shrikrishnadental.com/doctors.html</loc>
     <lastmod>2026-09-03</lastmod>

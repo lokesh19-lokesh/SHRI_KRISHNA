@@ -421,6 +421,21 @@ img {
   border-radius: 10px;
   padding: 0.6rem 0;
   box-shadow: var(--shadow-lg);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.dropdown-menu-custom::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dropdown-menu-custom::-webkit-scrollbar-track {
+  background: rgba(1, 13, 48, 0.5);
+}
+
+.dropdown-menu-custom::-webkit-scrollbar-thumb {
+  background: var(--champagne-gold);
+  border-radius: 4px;
 }
 
 .dropdown-menu-custom .dropdown-item {

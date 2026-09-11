@@ -25,21 +25,29 @@ Empanelled with **EHS (Employees' Health Scheme) under Aarogyasree** for Telanga
 ## Core Dental Treatments & Specialties
 - [Dental Implants](https://shrikrishnadental.com/dental-implants.html): Titanium & Zirconia implants (Nobel Biocare, Straumann, Osstem), immediate loading implants, bone grafting, sinus lifts, and All-on-4/6 full arch rehabilitation.
 - [Clear Aligners & Invisible Braces](https://shrikrishnadental.com/aligners.html): 3D digital intraoral scan smile design, Invisalign, Spark aligners, self-ligating braces, ceramic aesthetic braces.
-- [Painless Root Canal Treatment (RCT)](https://shrikrishnadental.com/root-canal-treatment.html): Single-sitting rotary endodontics, apex locator precision, rubber dam isolation, zirconia/porcelain crown capping.
+- [Orthodontic Treatment](https://shrikrishnadental.com/orthodontic-treatment.html): Metal and ceramic braces, self-ligating Damon systems, lingual braces, and retention appliances.
+- [Painless Root Canal Treatment (RCT)](https://shrikrishnadental.com/root-canal-treatment.html): Single-sitting rotary endodontics, apex locator precision, rubber dam isolation, zirconia/porcelain crown capping, fiber post reinforcement.
+- [Periodontal Therapy & Gum Surgery](https://shrikrishnadental.com/periodontal-therapy.html): Ultrasonic scaling & polishing, quadrant/full mouth flap surgery, bone grafting, subgingival curettage, root planing, crown lengthening, and vestibuloplasty.
+- [Prosthodontics & Dentures](https://shrikrishnadental.com/prosthodontics.html): CAD/CAM monolithic zirconia (5-Yr, 10-Yr, 3M Lava), DMLS, PFM crowns, complete dentures (standard & injection molded), Swiss BPS dentures, flexible partial dentures, and night guards.
+- [Oral & Maxillofacial Surgery](https://shrikrishnadental.com/oral-surgery.html): Painless tooth extractions, upper/lower impacted wisdom tooth disimpaction, surgical canine exposure, frenectomy, and apicoectomy with bone grafting.
+- [Restorative Dentistry](https://shrikrishnadental.com/restorative-dentistry.html): Tooth-colored biomimetic composite restorations (Class I-IV), Glass Ionomer Cement (GIC), ZOE sedative temporary dressings, and direct composite veneers.
 - [Laser Dentistry](https://shrikrishnadental.com/laser-dentistry.html): Minimally invasive soft-tissue diode laser treatments, laser gum depigmentation, bloodless frenectomy, photobiomodulation.
-- [Wisdom Tooth Removal & Oral Surgery](https://shrikrishnadental.com/dental-clinic-services.html): Atraumatic surgical extractions, impacted wisdom tooth removal, bone preservation.
-- [Pediatric Dentistry](https://shrikrishnadental.com/pediatric-dentistry.html): Pain-free child dental care, pit & fissure sealants, fluoride varnish, pulpectomy, and habit-breaking appliances.
+- [Pediatric Dentistry](https://shrikrishnadental.com/pediatric-dentistry.html): Pain-free child dental care, pit & fissure sealants, fluoride varnish, pulpectomy, preformed metal crowns, and habit-breaking appliances.
 - [Cosmetic Dentistry & Smile Makeover](https://shrikrishnadental.com/cosmetic-dentistry.html): Zoom! teeth whitening, custom porcelain veneers, composite bonding, gum contouring.
 
 ## Primary Canonical Pages & Sitemap Links
 - [Home Page](https://shrikrishnadental.com/) - Overview, hospital facilities, EHS scheme, reviews
-- [All Dental Clinic Services](https://shrikrishnadental.com/dental-clinic-services.html) - Complete treatment master page
-- [Dental Services Hub](https://shrikrishnadental.com/services.html) - Specialty category index
+- [All Dental Clinic Services](https://shrikrishnadental.com/dental-clinic-services.html) - Complete treatment master page & procedure directory
+- [Dental Services Hub](https://shrikrishnadental.com/services.html) - Specialty category index (11 clinical departments)
 - [Dental Implants Hyderabad](https://shrikrishnadental.com/dental-implants.html) - Implant types, costs & procedure
 - [Clear Aligners & Invisalign](https://shrikrishnadental.com/aligners.html) - Invisible braces & digital scanning
 - [Orthodontic Treatment](https://shrikrishnadental.com/orthodontic-treatment.html) - Braces for teens and adults
 - [Laser Dentistry](https://shrikrishnadental.com/laser-dentistry.html) - Pain-free laser soft tissue therapy
 - [Root Canal Treatment](https://shrikrishnadental.com/root-canal-treatment.html) - Single-visit rotary RCT
+- [Periodontal Therapy](https://shrikrishnadental.com/periodontal-therapy.html) - Gum care, bone graft & flap surgery
+- [Prosthodontics & Crowns](https://shrikrishnadental.com/prosthodontics.html) - Zirconia crowns & BPS dentures
+- [Oral & Maxillofacial Surgery](https://shrikrishnadental.com/oral-surgery.html) - Wisdom teeth & surgical extractions
+- [Restorative Dentistry](https://shrikrishnadental.com/restorative-dentistry.html) - Tooth-colored composite fillings & veneers
 - [Pediatric Dental Care](https://shrikrishnadental.com/pediatric-dentistry.html) - Children's dentistry
 - [Cosmetic Dentistry](https://shrikrishnadental.com/cosmetic-dentistry.html) - Smile makeovers & whitening
 - [Our Doctors & Specialists](https://shrikrishnadental.com/doctors.html) - MDS doctor profiles & credentials
