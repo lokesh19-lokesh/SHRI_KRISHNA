@@ -2509,6 +2509,10 @@ img {
     margin-bottom: 0.95rem;
   }
 
+  .feature-showcase-img img {
+    height: 250px;
+  }
+
   .service-card-title {
     font-size: 1.15rem;
     margin-bottom: 0.95rem;
