@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialsSlider();
   initCountUpStats();
   initTestimonialFilters();
+  initGallery();
 });
 
 /* --------------------------------------------------------------------------
@@ -439,4 +440,178 @@ function initTestimonialFilters() {
     });
   });
 }
+
+/* --------------------------------------------------------------------------
+   11. GALLERY FILTERING & FULLSCREEN LIGHTBOX
+   -------------------------------------------------------------------------- */
+function initGallery() {
+  const gallerySection = document.querySelector('.gallery-section');
+  if (!gallerySection) return;
+
+  const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const lightbox = document.getElementById('galleryLightbox');
+  if (!lightbox) return;
+
+  const lightboxImg = lightbox.querySelector('.lightbox-image');
+  const lightboxTitle = lightbox.querySelector('.lightbox-title');
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+  const lightboxCounter = lightbox.querySelector('.lightbox-counter');
+  const lightboxCategory = lightbox.querySelector('.lightbox-category-tag');
+  const lightboxCloseBtn = lightbox.querySelector('.lightbox-btn-close');
+  const lightboxPrevBtn = lightbox.querySelector('.lightbox-prev');
+  const lightboxNextBtn = lightbox.querySelector('.lightbox-next');
+
+  let currentVisibleCards = [];
+  let currentIndex = 0;
+
+  // Helper to refresh currently visible cards
+  function updateVisibleCards() {
+    currentVisibleCards = Array.from(galleryItems).filter(
+      (item) => !item.classList.contains('hidden-item')
+    );
+  }
+
+  updateVisibleCards();
+
+  // Category Filter Functionality
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter') || 'all';
+
+      galleryItems.forEach((item) => {
+        const itemCat = item.getAttribute('data-category') || '';
+        const shouldShow = filter === 'all' || itemCat.includes(filter);
+
+        if (shouldShow) {
+          item.classList.remove('hidden-item');
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(12px) scale(0.98)';
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0) scale(1)';
+            }, 30);
+          });
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            item.classList.add('hidden-item');
+          }, 250);
+        }
+      });
+
+      setTimeout(updateVisibleCards, 260);
+    });
+  });
+
+  // Lightbox Open & Display
+  function openLightbox(index) {
+    if (!currentVisibleCards.length) return;
+    currentIndex = (index + currentVisibleCards.length) % currentVisibleCards.length;
+    const targetItem = currentVisibleCards[currentIndex];
+    if (!targetItem) return;
+
+    const card = targetItem.querySelector('.gallery-card');
+    if (!card) return;
+
+    const src = card.getAttribute('data-img-src') || card.querySelector('img')?.getAttribute('src');
+    const title = card.getAttribute('data-title') || '';
+    const caption = card.getAttribute('data-caption') || '';
+    const category = card.getAttribute('data-category-label') || '';
+
+    if (lightboxImg) {
+      lightboxImg.style.opacity = '0';
+      lightboxImg.src = src;
+      lightboxImg.alt = title;
+      lightboxImg.onload = () => {
+        lightboxImg.style.opacity = '1';
+      };
+    }
+
+    if (lightboxTitle) lightboxTitle.textContent = title;
+    if (lightboxCaption) lightboxCaption.textContent = caption;
+    if (lightboxCategory) lightboxCategory.textContent = category;
+    if (lightboxCounter) {
+      lightboxCounter.textContent = `${currentIndex + 1} / ${currentVisibleCards.length}`;
+    }
+
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function showNext() {
+    openLightbox(currentIndex + 1);
+  }
+
+  function showPrev() {
+    openLightbox(currentIndex - 1);
+  }
+
+  // Click card or zoom button to open
+  galleryItems.forEach((item) => {
+    const card = item.querySelector('.gallery-card');
+    if (!card) return;
+
+    card.addEventListener('click', (e) => {
+      // Don't trigger if clicked on an actual interactive link inside
+      if (e.target.closest('a')) return;
+      updateVisibleCards();
+      const idx = currentVisibleCards.indexOf(item);
+      openLightbox(idx !== -1 ? idx : 0);
+    });
+  });
+
+  // Controls
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+  if (lightboxNextBtn) lightboxNextBtn.addEventListener('click', showNext);
+  if (lightboxPrevBtn) lightboxPrevBtn.addEventListener('click', showPrev);
+
+  // Close on backdrop click
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-backdrop-click')) {
+      closeLightbox();
+    }
+  });
+
+  // Keyboard navigation
+  window.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'ArrowLeft') showPrev();
+  });
+
+  // Mobile Touch Swipe Navigation
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchEndX - touchStartX;
+    if (Math.abs(diff) > 50) {
+      if (diff < 0) {
+        showNext();
+      } else {
+        showPrev();
+      }
+    }
+  }, { passive: true });
+}
+
 

@@ -172,6 +172,14 @@
     <priority>0.75</priority>
   </url>
 
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://shrikrishnadental.com/gallery.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- 18. Thank You Page -->
   <url>
     <loc>https://shrikrishnadental.com/thank-you.html</loc>
