@@ -267,7 +267,7 @@
       <!-- Interactive Filter Navigation -->
       <div class="gallery-filter-wrap" role="tablist" aria-label="Gallery category filters">
         <button type="button" class="gallery-filter-btn active" data-filter="all" aria-selected="true">
-          <i class="bi bi-grid-fill"></i> All Photos <span class="badge-count">18</span>
+          <i class="bi bi-grid-fill"></i> All Photos <span class="badge-count">17</span>
         </button>
         <button type="button" class="gallery-filter-btn" data-filter="clinic" aria-selected="false">
           <i class="bi bi-hospital"></i> Hospital & Operatories <span class="badge-count">6</span>
@@ -279,14 +279,14 @@
           <i class="bi bi-stars"></i> Treatments & Care <span class="badge-count">4</span>
         </button>
         <button type="button" class="gallery-filter-btn" data-filter="facilities" aria-selected="false">
-          <i class="bi bi-shield-check"></i> Facilities & Team <span class="badge-count">5</span>
+          <i class="bi bi-shield-check"></i> Facilities & Team <span class="badge-count">4</span>
         </button>
       </div>
 
       <!-- Bento Grid Layout: Harmonized Rows & Elegant Shapes -->
       <div class="gallery-bento-grid" id="galleryGrid">
 
-        <!-- ROW 1: Lead Hospital Showcase (2 Cards, Col-6 Each, Ratio Wide 16:10) -->
+        <!-- ROW 1: Lead Hospital Showcase (2 Cards, Col-6 Each, Ratio Wide 3:2) -->
         <!-- Item 1: Team Photo -->
         <div class="gallery-item gallery-col-6" data-category="facilities doctors all">
           <article class="gallery-card shape-squircle ratio-wide"
@@ -345,9 +345,9 @@
           </article>
         </div>
 
-        <!-- ROW 2: Medical Doctors Triptych (3 Cards, Col-4 Each, Architectural Arch 3:4 Tall Portrait) -->
+        <!-- ROW 2: Medical Doctors Quadriptych (4 Cards, Col-3 Each, Architectural Arch 2:3 Tall Portrait) -->
         <!-- Item 3: Dr. M. Praveen Kumar -->
-        <div class="gallery-item gallery-col-4" data-category="doctors all">
+        <div class="gallery-item gallery-col-3" data-category="doctors all">
           <article class="gallery-card shape-arch ratio-portrait-tall"
             data-img-src="assets/new media/Dr. M. Praveen Kumar.png"
             data-title="Dr. M. Praveen Kumar — Chief Dental Surgeon"
@@ -375,7 +375,7 @@
         </div>
 
         <!-- Item 4: Dr. K. Sowjanya -->
-        <div class="gallery-item gallery-col-4" data-category="doctors all">
+        <div class="gallery-item gallery-col-3" data-category="doctors all">
           <article class="gallery-card shape-arch ratio-portrait-tall"
             data-img-src="assets/new media/Dr. K. Sowjanya.png"
             data-title="Dr. K. Sowjanya — Consultant Orthodontist"
@@ -403,7 +403,7 @@
         </div>
 
         <!-- Item 5: Dr. Gowthami -->
-        <div class="gallery-item gallery-col-4" data-category="doctors all">
+        <div class="gallery-item gallery-col-3" data-category="doctors all">
           <article class="gallery-card shape-arch ratio-portrait-tall"
             data-img-src="assets/new media/Dr. Gowthami.png"
             data-title="Dr. Gowthami — Endodontist & Aesthetic Dentist"
@@ -430,8 +430,36 @@
           </article>
         </div>
 
-        <!-- ROW 3: Modern Operatories & Technology (3 Cards, Col-4 Each, Ratio Landscape 4:3) -->
-        <!-- Item 6: Operatory G1 -->
+        <!-- Item 6: Clinical Demonstration G3 -->
+        <div class="gallery-item gallery-col-3" data-category="clinic doctors all">
+          <article class="gallery-card shape-arch ratio-portrait-tall"
+            data-img-src="assets/new media/g3.png"
+            data-title="Doctor Consultation & Oral Hygiene Education"
+            data-category-label="Doctor Care"
+            data-caption="Dental specialist demonstrating oral hygiene techniques and anatomical models to help patients understand treatment stages.">
+            <div class="gallery-media-wrap">
+              <img src="assets/new media/g3.png"
+                alt="Dental specialist explaining patient treatment with oral anatomy model"
+                class="gallery-img"
+                loading="lazy"
+                width="1024" height="1536">
+              <div class="gallery-badges-bar">
+                <span class="gallery-badge-category"><i class="bi bi-person-badge-fill me-1"></i> Specialist Care</span>
+              </div>
+              <button type="button" class="gallery-zoom-trigger" aria-label="View full size image of patient demonstration">
+                <i class="bi bi-arrows-fullscreen"></i>
+              </button>
+              <div class="gallery-overlay">
+                <h3 class="gallery-title">Doctor Consultation</h3>
+                <span class="gallery-subtitle">Visual Patient Education</span>
+                <p class="gallery-desc">Transparent case demonstration using physical and 3D digital dental models.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ROW 3: Modern Operatories & Technology (3 Cards, Col-4 Each, Ratio Landscape 3:2) -->
+        <!-- Item 7: Operatory G1 -->
         <div class="gallery-item gallery-col-4" data-category="clinic all">
           <article class="gallery-card shape-squircle ratio-landscape"
             data-img-src="assets/new media/g1.png"
@@ -459,7 +487,7 @@
           </article>
         </div>
 
-        <!-- Item 7: Operatory G2 -->
+        <!-- Item 8: Operatory G2 -->
         <div class="gallery-item gallery-col-4" data-category="clinic all">
           <article class="gallery-card shape-pill-slant ratio-landscape"
             data-img-src="assets/new media/g2.png"
@@ -487,7 +515,7 @@
           </article>
         </div>
 
-        <!-- Item 8: Operatory G4 -->
+        <!-- Item 9: Operatory G4 -->
         <div class="gallery-item gallery-col-4" data-category="clinic all">
           <article class="gallery-card shape-squircle ratio-landscape"
             data-img-src="assets/new media/g4.png"
@@ -510,63 +538,6 @@
                 <h3 class="gallery-title">Restorative Dental Unit</h3>
                 <span class="gallery-subtitle">Micro-Precision Fillings & Crowns</span>
                 <p class="gallery-desc">High-torque dental handpieces with water cooling to protect natural tooth pulp viability.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- ROW 4: Clinical Sanctuary & Patient Experience (2 Cards, Col-6 Each, Ratio Wide 16:10) -->
-        <!-- Item 9: Operatory G3 -->
-        <div class="gallery-item gallery-col-6" data-category="clinic all">
-          <article class="gallery-card shape-pill-slant ratio-wide"
-            data-img-src="assets/new media/g3.png"
-            data-title="Private Treatment Bay & Radiography Suite"
-            data-category-label="Clinical Bay"
-            data-caption="Private treatment cabin maintaining high acoustic isolation, tranquil interior aesthetics, and continuous fresh-air HEPA circulation.">
-            <div class="gallery-media-wrap">
-              <img src="assets/new media/g3.png"
-                alt="Private dental operatory room with clean hygienic clinical environment"
-                class="gallery-img"
-                loading="lazy"
-                width="1024" height="1536">
-              <div class="gallery-badges-bar">
-                <span class="gallery-badge-category"><i class="bi bi-door-closed me-1"></i> Private Bay</span>
-              </div>
-              <button type="button" class="gallery-zoom-trigger" aria-label="View full size image of private treatment cabin">
-                <i class="bi bi-arrows-fullscreen"></i>
-              </button>
-              <div class="gallery-overlay">
-                <h3 class="gallery-title">Private Treatment Suite</h3>
-                <span class="gallery-subtitle">Acoustic & Sterile Isolation</span>
-                <p class="gallery-desc">Designed to reduce clinical anxiety while maintaining uncompromising sterile barriers.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Item 10: Homeabout Patient Care -->
-        <div class="gallery-item gallery-col-6" data-category="facilities all">
-          <article class="gallery-card shape-squircle ratio-wide"
-            data-img-src="assets/new media/homeabout.png"
-            data-title="Patient-Centered Clinical Sanctuary"
-            data-category-label="Facilities"
-            data-caption="Modern hospital ambience combining empathetic bedside manner with cutting-edge medical equipment in Miyapur.">
-            <div class="gallery-media-wrap">
-              <img src="assets/new media/homeabout.png"
-                alt="Doctor attending patient gently in modern dental operatory"
-                class="gallery-img"
-                loading="lazy"
-                width="1024" height="1536">
-              <div class="gallery-badges-bar">
-                <span class="gallery-badge-category"><i class="bi bi-heart-pulse me-1"></i> Patient Care</span>
-              </div>
-              <button type="button" class="gallery-zoom-trigger" aria-label="View full size image of patient care environment">
-                <i class="bi bi-arrows-fullscreen"></i>
-              </button>
-              <div class="gallery-overlay">
-                <h3 class="gallery-title">Compassionate Care Sanctuary</h3>
-                <span class="gallery-subtitle">Gentle Clinical Philosophy</span>
-                <p class="gallery-desc">Dedicated to making every dental visit painless, unhurried, and reassuring for patients of all ages.</p>
               </div>
             </div>
           </article>
